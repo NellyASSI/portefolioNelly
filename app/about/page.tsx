@@ -52,7 +52,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">À Propos</h1>
             <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed mb-8">
-              Je suis étudiante en BTSxxxxx SIO  à ESIC (École Supérieure d'Informatique et de Commerce). 
+              Je suis étudiante en BTS SIO option SLAM à ESIC (École Supérieure d'Informatique et de Commerce). 
               Avide de développement logiciel et de nouvelles technologies, je souhaite me spécialiser dans le développement d'applications web. 
               Je suis toujours à la recherche de nouvelles opportunités pour apprendre, expérimenter et développer mes compétences. 
               En dehors des cours, je m'intéresse à l'IA et aux jeux vidéo.
