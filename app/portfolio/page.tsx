@@ -69,7 +69,7 @@ export default function PortfolioPage() {
       description: "Plateforme intranet complète en cours de développement pour la gestion des congés, tickets et événements d'entreprise",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/838ae924a13129e2b2a40ca15a8e9295.png",
       tags: ["Vue.js", "Node.js", "JavaScript"],
-      github: "#",
+      github: "https://github.com/2026-BTS-SIO2-ESIC/CoreFlow.git",
     }
   ];
 
@@ -78,7 +78,7 @@ export default function PortfolioPage() {
       title: "Low-Code & No-Code - L'avenir du développement d'applications",
       sections: [
         {
-          subtitle: "🔎 Qu'est-ce que le Low-Code et No-Code ?",
+          subtitle: " Qu'est-ce que le Low-Code et No-Code ?",
           items: [
             "Approches de développement logiciel permettant de créer des applications avec très peu ou pas de code",
             "Utilisation d'interfaces visuelles, modules prêts à l'emploi et automatisations",
@@ -87,31 +87,31 @@ export default function PortfolioPage() {
           ]
         },
         {
-          subtitle: "📈 Tendances actuelles et à venir (2025–2026)",
+          subtitle: " Tendances actuelles et à venir (2025–2026)",
           items: [
-            "🚀 Adoption massive : 70-75% des nouvelles applications d'ici 2026 (Gartner)",
-            "🤖 Intégration de l'IA : automatisation des workflows, analyse de données, génération de code",
-            "🏢 Orientées entreprise : automatisation, portails clients, tableaux de bord avec sécurité renforcée",
-            "🧩 Spécialisation sectorielle : Santé, Finance, Éducation adaptées par secteur",
-            "⚙️ Automatisation avancée et intégration avec systèmes existants (CRM, ERP)"
+            " Adoption massive : 70-75% des nouvelles applications d'ici 2026 (Gartner)",
+            " Intégration de l'IA : automatisation des workflows, analyse de données, génération de code",
+            " Orientées entreprise : automatisation, portails clients, tableaux de bord avec sécurité renforcée",
+            " Spécialisation sectorielle : Santé, Finance, Éducation adaptées par secteur",
+            " Automatisation avancée et intégration avec systèmes existants (CRM, ERP)"
           ]
         },
         {
-          subtitle: "✅ Bénéfices clés",
+          subtitle: " Bénéfices clés",
           items: [
-            "⚡ Rapidité : déploiement jusqu'à 10 fois plus rapide que le développement traditionnel",
-            "💰 Réduction des coûts : jusqu'à 70% grâce à moindre dépendance aux développeurs spécialisés",
-            "👥 Empowerment des équipes : création d'outils sans dépendre de la DSI",
-            "🔗 Automatisation & intégration : synchronisation des données avec CRM, ERP et API"
+            " Rapidité : déploiement jusqu'à 10 fois plus rapide que le développement traditionnel",
+            " Réduction des coûts : jusqu'à 70% grâce à moindre dépendance aux développeurs spécialisés",
+            " Empowerment des équipes : création d'outils sans dépendre de la DSI",
+            " Automatisation & intégration : synchronisation des données avec CRM, ERP et API"
           ]
         },
         {
-          subtitle: "⚠️ Défis et limites à connaître",
+          subtitle: " Défis et limites à connaître",
           items: [
-            "🔐 Gouvernance & sécurité : risques de shadow IT, failles de sécurité, incohérences de données",
-            "🎨 Qualité & UX : applications moins ergonomiques et moins optimisées si créées par non-experts",
-            "🔧 Maintenance : difficulté à maintenir certaines applications et risque si créateur quitte",
-            "🧠 Limites techniques : projets complexes nécessitent toujours du code (SAP)"
+            " Gouvernance & sécurité : risques de shadow IT, failles de sécurité, incohérences de données",
+            " Qualité & UX : applications moins ergonomiques et moins optimisées si créées par non-experts",
+            " Maintenance : difficulté à maintenir certaines applications et risque si créateur quitte",
+            " Limites techniques : projets complexes nécessitent toujours du code (SAP)"
           ]
         },
         {
@@ -129,15 +129,15 @@ export default function PortfolioPage() {
           ]
         },
         {
-          subtitle: "🔮 Perspectives futures",
+          subtitle: "Perspectives futures",
           items: [
-            "🤖 IA générative : création d'applications avec instructions en langage naturel",
-            "📊 Standardisation : modèles d'évaluation pour comparer et choisir les meilleurs outils",
-            "🎯 Démocratisation complète du développement informatique"
+            " IA générative : création d'applications avec instructions en langage naturel",
+            " Standardisation : modèles d'évaluation pour comparer et choisir les meilleurs outils",
+            " Démocratisation complète du développement informatique"
           ]
         },
         {
-          subtitle: "📌 Points clés à retenir",
+          subtitle: "Points clés à retenir",
           items: [
             "Levier majeur de transformation digitale",
             "Création plus rapide et à moindre coût",
@@ -147,7 +147,7 @@ export default function PortfolioPage() {
           ]
         },
         {
-          subtitle: "📚 Sources fiables",
+          subtitle: "Sources fiables",
           items: [
             "Gartner – prévisions marché low-code",
             "Microsoft – Power Platform",
@@ -375,161 +375,250 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Veille Technologique Section - Enhanced */}
-      <section id="veille-complete" className="py-20 bg-[#421734]">
+      {/* Veille Technologique Section - Enhanced with Animations */}
+      <section id="veille-complete" className="py-20 bg-gradient-to-b from-[#421734] to-[#2A1428]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Veille Technologique</h2>
-            <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto">
-              Je maintiens une veille active sur les dernières innovations technologiques, 
-              les frameworks émergents et les meilleures pratiques du développement logiciel.
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              Veille Technologique
+            </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#B2174A] to-[#C8514D] mx-auto mb-6"></div>
+            <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed">
+              Low-Code & No-Code : L'avenir du développement d'applications
             </p>
           </div>
           
-          <div className="w-full">
-            {veilleTopics.map((topic, index) => (
-              <div key={index} className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
-                  <div className="w-10 h-10 bg-[#B2174A] rounded-lg flex items-center justify-center mr-3">
-                    <i className="ri-lightbulb-line text-white w-5 h-5 flex items-center justify-center"></i>
-                  </div>
-                  {topic.title}
-                </h3>
-                
-                {topic.sections && topic.sections.map((section, sectionIndex) => (
-                  <div key={sectionIndex} className="mb-8">
-                    <h4 className="text-lg font-bold text-[#DFA49A] mb-4">{section.subtitle}</h4>
-                    <ul className="space-y-3 ml-4">
-                      {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
-                          <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0 flex-none"></i>
-                          <span className="text-[#DFA49A] text-sm leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+          {/* Main Content Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+            {/* Définition Card */}
+            <div className="group bg-[#2A2224] rounded-2xl p-8 border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-500 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
+              <div className="flex items-start mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#B2174A] to-[#C8514D] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <i className="ri-lightbulb-flash-line text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-white">Qu'est-ce que?</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start group/item">
+                  <span className="w-2 h-2 bg-[#C8514D] rounded-full mt-2 mr-3 group-hover/item:scale-150 transition-transform duration-300"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Créer des applications avec très peu ou pas de code</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="w-2 h-2 bg-[#C8514D] rounded-full mt-2 mr-3 group-hover/item:scale-150 transition-transform duration-300"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Interfaces visuelles et modules prêts à l'emploi</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="w-2 h-2 bg-[#C8514D] rounded-full mt-2 mr-3 group-hover/item:scale-150 transition-transform duration-300"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Démocratisation du développement informatique</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Tendances Card */}
+            <div className="group bg-[#2A2224] rounded-2xl p-8 border border-[#5A1F2E] hover:border-[#C8514D] transition-all duration-500 hover:shadow-2xl hover:shadow-[#C8514D]/20 transform hover:-translate-y-1">
+              <div className="flex items-start mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#C8514D] to-[#DFA49A] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <i className="ri-trending-up-line text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-white">Tendances 2025-2026</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start group/item">
+                  <span className="text-[#C8514D] mr-3 font-bold text-lg"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed"><strong>70-75%</strong> des nouvelles apps (Gartner)</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#C8514D] mr-3 font-bold text-lg"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Intégration massive de l'<strong>IA générative</strong></span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#C8514D] mr-3 font-bold text-lg"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Solutions <strong>orientées entreprise</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Bénéfices Card */}
+            <div className="group bg-[#2A2224] rounded-2xl p-8 border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-500 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
+              <div className="flex items-start mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#B2174A] to-[#92166B] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <i className="ri-star-smile-line text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-white">Bénéfices clés</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-[#5A1F2E]/40 rounded-lg p-4 hover:bg-[#5A1F2E]/70 transition-colors duration-300">
+                  <p className="text-[#C8514D] text-lg font-bold"> 10x</p>
+                  <p className="text-xs text-[#DFA49A]">Plus rapide</p>
+                </div>
+                <div className="bg-[#5A1F2E]/40 rounded-lg p-4 hover:bg-[#5A1F2E]/70 transition-colors duration-300">
+                  <p className="text-[#C8514D] text-lg font-bold"> 70%</p>
+                  <p className="text-xs text-[#DFA49A]">Réduction coûts</p>
+                </div>
+                <div className="bg-[#5A1F2E]/40 rounded-lg p-4 hover:bg-[#5A1F2E]/70 transition-colors duration-300">
+                  <p className="text-[#C8514D] text-lg font-bold"> Équipes</p>
+                  <p className="text-xs text-[#DFA49A]">Empowerment</p>
+                </div>
+                <div className="bg-[#5A1F2E]/40 rounded-lg p-4 hover:bg-[#5A1F2E]/70 transition-colors duration-300">
+                  <p className="text-[#C8514D] text-lg font-bold"> API</p>
+                  <p className="text-xs text-[#DFA49A]">Intégration</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Défis Card */}
+            <div className="group bg-[#2A2224] rounded-2xl p-8 border border-[#5A1F2E] hover:border-[#DFA49A] transition-all duration-500 hover:shadow-2xl hover:shadow-[#DFA49A]/10 transform hover:-translate-y-1">
+              <div className="flex items-start mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#7D527A] to-[#5A3D63] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <i className="ri-alert-line text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-white">Défis à relever</h3>
+              </div>
+              <ul className="space-y-2.5">
+                <li className="flex items-start group/item">
+                  <span className="text-[#DFA49A] mr-2">⚠️</span>
+                  <span className="text-[#DFA49A] text-sm">Gouvernance & sécurité</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#DFA49A] mr-2">⚠️</span>
+                  <span className="text-[#DFA49A] text-sm">Qualité & UX</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#DFA49A] mr-2">⚠️</span>
+                  <span className="text-[#DFA49A] text-sm">Maintenance à long terme</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#DFA49A] mr-2">⚠️</span>
+                  <span className="text-[#DFA49A] text-sm">Limites techniques</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Plateformes Section */}
+          {showFullVeille && (
+            <div className="mt-16 space-y-12 animate-in fade-in duration-700">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-white mb-2">🛠️ Plateformes</h3>
+                <div className="h-1 w-16 bg-gradient-to-r from-[#B2174A] to-[#C8514D] mx-auto"></div>
+              </div>
+
+              <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {[
+                  { name: 'OutSystems', type: 'Enterprise', icon: 'ri-building-4-line' },
+                  { name: 'Mendix', type: 'Enterprise', icon: 'ri-team-line' },
+                  { name: 'Microsoft Power', type: 'Enterprise', icon: 'ri-windows-line' },
+                  { name: 'Appian', type: 'Enterprise', icon: 'ri-flow-chart-line' },
+                  { name: 'Bubble', type: 'Accessible', icon: 'ri-bubble-chart-line' },
+                  { name: 'Retool', type: 'Accessible', icon: 'ri-tools-line' },
+                  { name: 'Airtable', type: 'Accessible', icon: 'ri-table-2' },
+                  { name: 'FlutterFlow', type: 'Accessible', icon: 'ri-smartphone-line' },
+                ].map((platform, idx) => (
+                  <div key={idx} className="group bg-[#2A2224] rounded-xl p-6 border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-2 cursor-pointer">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#B2174A] to-[#C8514D] rounded-lg flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                      <i className={`${platform.icon} text-white text-xl`}></i>
+                    </div>
+                    <h4 className="font-bold text-white mb-1 group-hover:text-[#DFA49A] transition-colors duration-300">{platform.name}</h4>
+                    <p className="text-xs text-[#DFA49A]/70">{platform.type}</p>
                   </div>
                 ))}
               </div>
-            ))}
-          </div>
-          
-          {showFullVeille && (
-            <div className="mt-16 space-y-12">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-8">Ressources et Plateformes Low-Code & No-Code</h3>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
-                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <i className="ri-building-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
-                    Plateformes Enterprise
-                  </h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">OutSystems</p>
-                        <p className="text-xs text-[#DFA49A]/80">Plateforme complète d'entreprise avec IA</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Mendix</p>
-                        <p className="text-xs text-[#DFA49A]/80">Collaboration IT/métier optimisée</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Microsoft Power Platform</p>
-                        <p className="text-xs text-[#DFA49A]/80">Écosystème low-code Microsoft</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Appian</p>
-                        <p className="text-xs text-[#DFA49A]/80">Automatisation avancée des processus</p>
-                      </div>
-                    </li>
-                  </ul>
+
+              {/* YouTube Videos Section */}
+              <div className="mt-20">
+                <div className="text-center mb-12">
+                  <h3 className="text-3xl font-bold text-white mb-2">📺 Ressources Vidéo</h3>
+                  <div className="h-1 w-16 bg-gradient-to-r from-[#B2174A] to-[#C8514D] mx-auto mb-4"></div>
+                  <p className="text-[#DFA49A]">Découvrez des tutoriels et analyses sur le Low-Code & No-Code</p>
                 </div>
-                
-                <div className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
-                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <i className="ri-computer-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
-                    Plateformes Accessibles
-                  </h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Bubble</p>
-                        <p className="text-xs text-[#DFA49A]/80">Applications web sans code</p>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
+                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
+                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
+                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
                       </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Retool</p>
-                        <p className="text-xs text-[#DFA49A]/80">Outils internes et dashboards rapides</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">Airtable</p>
-                        <p className="text-xs text-[#DFA49A]/80">Base de données visuelle et flexible</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <div>
-                        <p className="font-medium text-white">FlutterFlow</p>
-                        <p className="text-xs text-[#DFA49A]/80">Applications mobiles sans code</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-[#5A1F2E] to-[#421734] rounded-2xl p-8 border border-[#C98A8A]/30">
-                <h4 className="text-2xl font-bold text-white mb-6 text-center">Cas d'Usage Majeurs</h4>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
-                    <div className="w-12 h-12 bg-[#B2174A] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-speed-line text-white text-xl"></i>
+                      <input
+                        type="text"
+                        placeholder="youtube.com/watch?v=..."
+                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
+                      />
                     </div>
-                    <h5 className="font-bold text-white mb-2">Rapidité</h5>
-                    <p className="text-sm text-[#DFA49A]">Déploiement 10x plus rapide / Time-to-market réduit</p>
+                    <div className="p-6">
+                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #1</h4>
+                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
+                      <div className="flex items-center text-xs text-[#C8514D]">
+                        <i className="ri-video-line mr-2"></i>
+                        Cliquez pour ajouter
+                      </div>
+                    </div>
                   </div>
-                  <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
-                    <div className="w-12 h-12 bg-[#C8514D] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-money-dollar-circle-line text-white text-xl"></i>
+
+                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
+                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
+                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
+                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="youtube.com/watch?v=..."
+                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
+                      />
                     </div>
-                    <h5 className="font-bold text-white mb-2">Économies</h5>
-                    <p className="text-sm text-[#DFA49A]">Réduction de 70% des coûts de développement</p>
+                    <div className="p-6">
+                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #2</h4>
+                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
+                      <div className="flex items-center text-xs text-[#C8514D]">
+                        <i className="ri-video-line mr-2"></i>
+                        Cliquez pour ajouter
+                      </div>
+                    </div>
                   </div>
-                  <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
-                    <div className="w-12 h-12 bg-[#7D527A] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-team-line text-white text-xl"></i>
+
+                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
+                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
+                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
+                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="youtube.com/watch?v=..."
+                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
+                      />
                     </div>
-                    <h5 className="font-bold text-white mb-2">Collaboration</h5>
-                    <p className="text-sm text-[#DFA49A]">Empowerment des équipes métier</p>
+                    <div className="p-6">
+                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #3</h4>
+                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
+                      <div className="flex items-center text-xs text-[#C8514D]">
+                        <i className="ri-video-line mr-2"></i>
+                        Cliquez pour ajouter
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           )}
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <button 
               onClick={() => setShowFullVeille(!showFullVeille)}
-              className="bg-[#B2174A] text-white px-8 py-4 rounded-lg hover:bg-[#C8514D] transition-colors font-medium whitespace-nowrap cursor-pointer"
+              className="group bg-gradient-to-r from-[#B2174A] to-[#C8514D] text-white px-10 py-4 rounded-full hover:shadow-2xl hover:shadow-[#B2174A]/40 transition-all duration-300 font-bold whitespace-nowrap cursor-pointer transform hover:scale-105 flex items-center gap-2 mx-auto"
             >
-              {showFullVeille ? 'Masquer les détails' : 'Accéder à ma veille complète'}
+              {showFullVeille ? (
+                <>
+                  <i className="ri-arrow-up-s-line group-hover:-translate-y-1 transition-transform duration-300"></i>
+                  Voir moins
+                </>
+              ) : (
+                <>
+                  <i className="ri-arrow-down-s-line group-hover:translate-y-1 transition-transform duration-300"></i>
+                  Voir plus
+                </>
+              )}
             </button>
           </div>
         </div>
