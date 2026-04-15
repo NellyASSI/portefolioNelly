@@ -75,57 +75,88 @@ export default function PortfolioPage() {
 
   const veilleTopics = [
     {
-      title: "Intelligence Artificielle et Machine Learning",
-      items: [
-        "GPT-4 et les dernières avancées des LLM",
-        "AutoML et démocratisation du Machine Learning",
-        "IA générative dans le développement logiciel",
-        "Éthique et biais dans les algorithmes d'IA"
-      ]
-    },
-    {
-      title: "Développement Web Frontend",
-      items: [
-        "React 18 et les Server Components",
-        "WebAssembly pour les performances web",
-        "Progressive Web Apps (PWA) modernes",
-        "CSS Container Queries et nouvelles spécifications"
-      ]
-    },
-    {
-      title: "Architecture et Backend",
-      items: [
-        "Microservices vs Architecture Monolithique",
-        "Serverless Computing et Functions as a Service",
-        "GraphQL vs REST API",
-        "Containers et orchestration avec Kubernetes"
-      ]
-    },
-    {
-      title: "Cybersécurité",
-      items: [
-        "Zero Trust Security Model",
-        "Sécurité des API et authentification moderne",
-        "DevSecOps et sécurité dans le CI/CD",
-        "Protection des données personnelles (RGPD)"
-      ]
-    },
-    {
-      title: "DevOps et Infrastructure",
-      items: [
-        "Infrastructure as Code (IaC)",
-        "CI/CD pipelines modernes",
-        "Monitoring et observabilité",
-        "Cloud Computing : AWS, Azure, GCP"
-      ]
-    },
-    {
-      title: "Nouvelles Technologies",
-      items: [
-        "Blockchain et développement DApps",
-        "Internet des Objets (IoT) et Edge Computing",
-        "Réalité Virtuelle/Augmentée sur le web",
-        "5G et impact sur les applications mobiles"
+      title: "Low-Code & No-Code - L'avenir du développement d'applications",
+      sections: [
+        {
+          subtitle: "🔎 Qu'est-ce que le Low-Code et No-Code ?",
+          items: [
+            "Approches de développement logiciel permettant de créer des applications avec très peu ou pas de code",
+            "Utilisation d'interfaces visuelles, modules prêts à l'emploi et automatisations",
+            "No-code vise les utilisateurs sans compétences techniques",
+            "Low-code s'adresse à des utilisateurs ayant quelques connaissances ou pour des projets nécessitant plus de personnalisation"
+          ]
+        },
+        {
+          subtitle: "📈 Tendances actuelles et à venir (2025–2026)",
+          items: [
+            "🚀 Adoption massive : 70-75% des nouvelles applications d'ici 2026 (Gartner)",
+            "🤖 Intégration de l'IA : automatisation des workflows, analyse de données, génération de code",
+            "🏢 Orientées entreprise : automatisation, portails clients, tableaux de bord avec sécurité renforcée",
+            "🧩 Spécialisation sectorielle : Santé, Finance, Éducation adaptées par secteur",
+            "⚙️ Automatisation avancée et intégration avec systèmes existants (CRM, ERP)"
+          ]
+        },
+        {
+          subtitle: "✅ Bénéfices clés",
+          items: [
+            "⚡ Rapidité : déploiement jusqu'à 10 fois plus rapide que le développement traditionnel",
+            "💰 Réduction des coûts : jusqu'à 70% grâce à moindre dépendance aux développeurs spécialisés",
+            "👥 Empowerment des équipes : création d'outils sans dépendre de la DSI",
+            "🔗 Automatisation & intégration : synchronisation des données avec CRM, ERP et API"
+          ]
+        },
+        {
+          subtitle: "⚠️ Défis et limites à connaître",
+          items: [
+            "🔐 Gouvernance & sécurité : risques de shadow IT, failles de sécurité, incohérences de données",
+            "🎨 Qualité & UX : applications moins ergonomiques et moins optimisées si créées par non-experts",
+            "🔧 Maintenance : difficulté à maintenir certaines applications et risque si créateur quitte",
+            "🧠 Limites techniques : projets complexes nécessitent toujours du code (SAP)"
+          ]
+        },
+        {
+          subtitle: "🛠️ Plateformes majeures à connaître",
+          items: [
+            "OutSystems → Low-code entreprise complète",
+            "Mendix → Collaboration IT/métier optimisée",
+            "Retool → Outils internes et dashboards",
+            "Appian → Automatisation des processus",
+            "Bubble → Applications web sans code",
+            "Airtable → Base de données visuelle",
+            "WeWeb → Interfaces frontend modernes",
+            "Xano → Backend sans code",
+            "FlutterFlow → Applications mobiles"
+          ]
+        },
+        {
+          subtitle: "🔮 Perspectives futures",
+          items: [
+            "🤖 IA générative : création d'applications avec instructions en langage naturel",
+            "📊 Standardisation : modèles d'évaluation pour comparer et choisir les meilleurs outils",
+            "🎯 Démocratisation complète du développement informatique"
+          ]
+        },
+        {
+          subtitle: "📌 Points clés à retenir",
+          items: [
+            "Levier majeur de transformation digitale",
+            "Création plus rapide et à moindre coût",
+            "Démocratisation du développement informatique",
+            "Nécessite une bonne gouvernance et sécurité",
+            "L'IA va encore accélérer son évolution"
+          ]
+        },
+        {
+          subtitle: "📚 Sources fiables",
+          items: [
+            "Gartner – prévisions marché low-code",
+            "Microsoft – Power Platform",
+            "Amazon Web Services – définition low-code",
+            "SAP – enjeux LCNC",
+            "IONOS – comparaison low-code/no-code",
+            "Appvizer – avantages et usages"
+          ]
+        }
       ]
     }
   ];
@@ -355,23 +386,29 @@ export default function PortfolioPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="w-full">
             {veilleTopics.map((topic, index) => (
-              <div key={index} className="bg-[#2A2224] rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-[#5A1F2E]">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+              <div key={index} className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
+                <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
                   <div className="w-10 h-10 bg-[#B2174A] rounded-lg flex items-center justify-center mr-3">
                     <i className="ri-lightbulb-line text-white w-5 h-5 flex items-center justify-center"></i>
                   </div>
                   {topic.title}
                 </h3>
-                <ul className="space-y-3">
-                  {topic.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <i className="ri-arrow-right-line text-[#C8514D] mr-2 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                      <span className="text-[#DFA49A] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                
+                {topic.sections && topic.sections.map((section, sectionIndex) => (
+                  <div key={sectionIndex} className="mb-8">
+                    <h4 className="text-lg font-bold text-[#DFA49A] mb-4">{section.subtitle}</h4>
+                    <ul className="space-y-3 ml-4">
+                      {section.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start">
+                          <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0 flex-none"></i>
+                          <span className="text-[#DFA49A] text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
@@ -379,88 +416,108 @@ export default function PortfolioPage() {
           {showFullVeille && (
             <div className="mt-16 space-y-12">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-8">Ressources et Articles de Veille</h3>
+                <h3 className="text-2xl font-bold text-white mb-8">Ressources et Plateformes Low-Code & No-Code</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <i className="ri-article-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
-                    Sources de Veille
+                    <i className="ri-building-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
+                    Plateformes Enterprise
                   </h4>
                   <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <i className="ri-checkbox-circle-line text-[#C8514D] mr-3 w-4 h-4 flex items-center justify-center"></i>
-                      <span className="text-[#DFA49A]">Stack Overflow Developer Survey</span>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">OutSystems</p>
+                        <p className="text-xs text-[#DFA49A]/80">Plateforme complète d'entreprise avec IA</p>
+                      </div>
                     </li>
-                    <li className="flex items-center">
-                      <i className="ri-checkbox-circle-line text-[#C8514D] mr-3 w-4 h-4 flex items-center justify-center"></i>
-                      <span className="text-[#DFA49A]">GitHub Trending</span>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Mendix</p>
+                        <p className="text-xs text-[#DFA49A]/80">Collaboration IT/métier optimisée</p>
+                      </div>
                     </li>
-                    <li className="flex items-center">
-                      <i className="ri-checkbox-circle-line text-[#C8514D] mr-3 w-4 h-4 flex items-center justify-center"></i>
-                      <span className="text-[#DFA49A]">Dev.to Community</span>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Microsoft Power Platform</p>
+                        <p className="text-xs text-[#DFA49A]/80">Écosystème low-code Microsoft</p>
+                      </div>
                     </li>
-                    <li className="flex items-center">
-                      <i className="ri-checkbox-circle-line text-[#C8514D] mr-3 w-4 h-4 flex items-center justify-center"></i>
-                      <span className="text-[#DFA49A]">Mozilla Developer Network</span>
-                    </li>
-                    <li className="flex items-center">
-                      <i className="ri-checkbox-circle-line text-[#C8514D] mr-3 w-4 h-4 flex items-center justify-center"></i>
-                      <span className="text-[#DFA49A]">TechCrunch Technology</span>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Appian</p>
+                        <p className="text-xs text-[#DFA49A]/80">Automatisation avancée des processus</p>
+                      </div>
                     </li>
                   </ul>
                 </div>
                 
                 <div className="bg-[#2A2224] rounded-xl shadow-lg p-8 border border-[#5A1F2E]">
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <i className="ri-calendar-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
-                    Fréquence de Veille
+                    <i className="ri-computer-line text-[#B2174A] mr-3 w-6 h-6 flex items-center justify-center"></i>
+                    Plateformes Accessibles
                   </h4>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-[#DFA49A]">Articles tech quotidiens</span>
-                      <span className="bg-[#C8514D]/20 text-[#C8514D] px-3 py-1 rounded-full text-sm font-medium">Quotidien</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-[#DFA49A]">Nouvelles technologies</span>
-                      <span className="bg-[#B2174A]/20 text-[#B2174A] px-3 py-1 rounded-full text-sm font-medium">Hebdomadaire</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-[#DFA49A]">Frameworks & Libraries</span>
-                      <span className="bg-[#7D527A]/20 text-[#7D527A] px-3 py-1 rounded-full text-sm font-medium">Bi-mensuel</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-[#DFA49A]">Analyse de marché</span>
-                      <span className="bg-[#C98A8A]/20 text-[#C98A8A] px-3 py-1 rounded-full text-sm font-medium">Mensuel</span>
-                    </div>
-                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Bubble</p>
+                        <p className="text-xs text-[#DFA49A]/80">Applications web sans code</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Retool</p>
+                        <p className="text-xs text-[#DFA49A]/80">Outils internes et dashboards rapides</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">Airtable</p>
+                        <p className="text-xs text-[#DFA49A]/80">Base de données visuelle et flexible</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="ri-arrow-right-line text-[#C8514D] mr-3 mt-1 w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
+                      <div>
+                        <p className="font-medium text-white">FlutterFlow</p>
+                        <p className="text-xs text-[#DFA49A]/80">Applications mobiles sans code</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
               
               <div className="bg-gradient-to-r from-[#5A1F2E] to-[#421734] rounded-2xl p-8 border border-[#C98A8A]/30">
-                <h4 className="text-2xl font-bold text-white mb-6 text-center">Dernières Découvertes</h4>
+                <h4 className="text-2xl font-bold text-white mb-6 text-center">Cas d'Usage Majeurs</h4>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
                     <div className="w-12 h-12 bg-[#B2174A] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-brain-line text-white text-xl"></i>
+                      <i className="ri-speed-line text-white text-xl"></i>
                     </div>
-                    <h5 className="font-bold text-white mb-2">GPT-4 Turbo</h5>
-                    <p className="text-sm text-[#DFA49A]">Nouvelles capacités multimodales et optimisations de performance</p>
+                    <h5 className="font-bold text-white mb-2">Rapidité</h5>
+                    <p className="text-sm text-[#DFA49A]">Déploiement 10x plus rapide / Time-to-market réduit</p>
                   </div>
                   <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
                     <div className="w-12 h-12 bg-[#C8514D] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-code-line text-white text-xl"></i>
+                      <i className="ri-money-dollar-circle-line text-white text-xl"></i>
                     </div>
-                    <h5 className="font-bold text-white mb-2">Bun Runtime</h5>
-                    <p className="text-sm text-[#DFA49A]">Alternative ultra-rapide à Node.js avec bundler intégré</p>
+                    <h5 className="font-bold text-white mb-2">Économies</h5>
+                    <p className="text-sm text-[#DFA49A]">Réduction de 70% des coûts de développement</p>
                   </div>
                   <div className="bg-[#2A2224] rounded-xl p-6 shadow-md border border-[#5A1F2E]">
                     <div className="w-12 h-12 bg-[#7D527A] rounded-lg flex items-center justify-center mb-4">
-                      <i className="ri-shield-line text-white text-xl"></i>
+                      <i className="ri-team-line text-white text-xl"></i>
                     </div>
-                    <h5 className="font-bold text-white mb-2">Zero Trust</h5>
-                    <p className="text-sm text-[#DFA49A]">Évolution des architectures de sécurité pour les applications modernes</p>
+                    <h5 className="font-bold text-white mb-2">Collaboration</h5>
+                    <p className="text-sm text-[#DFA49A]">Empowerment des équipes métier</p>
                   </div>
                 </div>
               </div>

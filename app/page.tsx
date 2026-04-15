@@ -135,20 +135,18 @@ export default function Home() {
                   <div className="text-gray-600">Projets réalisés</div>
                 </div>
                 <div className="text-center p-6 bg-[#DFA49A]/20 rounded-lg border border-[#C98A8A]/30">
-                  <div className="text-3xl font-bold text-[#B2174A] mb-2">2</div>
+                  <div className="text-3xl font-bold text-[#B2174A] mb-2">2+</div>
                   <div className="text-gray-600">Années d'études</div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div 
-                className="rounded-2xl shadow-2xl w-full h-96 bg-cover bg-center border-4 border-[#C98A8A]/30"
-                style={{
-                  backgroundImage: `url('https://readdy.ai/api/search-image?query=young%20professional%20woman%20student%20working%20on%20laptop%20in%20modern%20bright%20office%20space%2C%20focused%20on%20coding%20and%20web%20development%2C%20contemporary%20workspace%20with%20natural%20lighting%2C%20professional%20business%20casual%20attire%2C%20technology%20and%20innovation%20theme%2C%20warm%20and%20inviting%20atmosphere%2C%20high%20quality%20professional%20photography&width=600&height=800&seq=about002&orientation=portrait')`,
-                  filter: 'brightness(1.05) contrast(1.08) saturate(1.1)'
-                }}
-              ></div>
-            </div>
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20female%20developer%20in%20a%20modern%20tech%20environment%2C%20soft%20lighting%2C%20sophisticated%20and%20approachable%20atmosphere&width=600&height=600&seq=about001&orientation=square"
+                alt="Portrait de Nelly"
+                className="w-full h-auto rounded-lg shadow-lg object-cover object-top"
+              />
+          </div>
           </div>
         </div>
       </section>
