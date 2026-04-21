@@ -56,7 +56,7 @@ export default function Home() {
                 À propos
               </Link>
               <Link href="/portfolio" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A] whitespace-nowrap cursor-pointer">
-                Portfolio
+                Projets
               </Link>
               <Link href="/certifications" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A] whitespace-nowrap cursor-pointer">
                 Attestations/Rapports
@@ -85,7 +85,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=modern%20technology%20workspace%20with%20elegant%20purple%20and%20pink%20ambient%20lighting%2C%20sophisticated%20digital%20environment%2C%20professional%20coding%20setup%20with%20soft%20feminine%20colors%2C%20contemporary%20tech%20atmosphere%20with%20warm%20tones%2C%20minimalist%20design%20aesthetic%2C%20high%20quality%20professional%20photography&width=1920&height=1080&seq=hero001&orientation=landscape')`,
+            backgroundImage: `url('images/me.jpeg')`,
             filter: 'brightness(0.5) contrast(1.1)'
           }}
         ></div>
@@ -112,123 +112,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-[#421734] mb-6">À propos de moi</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Étudiante en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers), 
-                je me passionne pour le développement web et les nouvelles technologies. 
-                Mon parcours me permet d'acquérir des compétences solides en programmation.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                J'aime créer des solutions innovantes et apprendre continuellement. 
-                Mon objectif est de devenir développeuse full-stack et contribuer à des projets 
-                qui ont un impact positif.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-[#DFA49A]/20 rounded-lg border border-[#C98A8A]/30">
-                  <div className="text-3xl font-bold text-[#B2174A] mb-2">6+</div>
-                  <div className="text-gray-600">Projets réalisés</div>
-                </div>
-                <div className="text-center p-6 bg-[#DFA49A]/20 rounded-lg border border-[#C98A8A]/30">
-                  <div className="text-3xl font-bold text-[#B2174A] mb-2">2+</div>
-                  <div className="text-gray-600">Années d'études</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20female%20developer%20in%20a%20modern%20tech%20environment%2C%20soft%20lighting%2C%20sophisticated%20and%20approachable%20atmosphere&width=600&height=600&seq=about001&orientation=square"
-                alt="Portrait de Nelly"
-                className="w-full h-auto rounded-lg shadow-lg object-cover object-top"
-              />
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-20 bg-[#421734]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Mes Compétences</h2>
-            <p className="text-xl text-[#DFA49A]">Technologies et langages que je maîtrise</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => (
-              <div key={index} className="bg-[#2A2224] p-6 rounded-xl shadow-lg border border-[#5A1F2E]">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="font-semibold text-white">{skill.name}</h3>
-                  <span className="text-sm text-[#DFA49A]">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-[#5A1F2E] rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-[#B2174A] to-[#C8514D] h-2 rounded-full transition-all duration-1000"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#421734] mb-4">Mon Portfolio</h2>
-            <p className="text-xl text-gray-600">Découvrez mes projets académiques et personnels</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer border border-[#DFA49A]/20">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#421734] mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="bg-[#DFA49A]/30 text-[#5A1F2E] px-3 py-1 rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Link
-                    href={project.link}
-                    className="inline-flex items-center text-[#B2174A] hover:text-[#C8514D] font-medium transition-colors cursor-pointer"
-                  >
-                    Voir le projet
-                    <i className="ri-arrow-right-line ml-2 w-4 h-4 flex items-center justify-center"></i>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/portfolio"
-              className="bg-[#B2174A] text-white px-8 py-4 rounded-lg hover:bg-[#C8514D] transition-colors font-medium whitespace-nowrap cursor-pointer text-lg"
-            >
-              Voir tous mes projets
-            </Link>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Contact Section */}
       <section className="py-20 bg-[#2A2224]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

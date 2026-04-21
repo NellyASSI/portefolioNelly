@@ -126,7 +126,7 @@ export default function ContactPage() {
                 À propos
               </Link>
               <Link href="/portfolio" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A] whitespace-nowrap cursor-pointer">
-                Portfolio
+                Projets
               </Link>
               <Link href="/certifications" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A] whitespace-nowrap cursor-pointer">
                 Attestations/Rapports
@@ -243,27 +243,6 @@ export default function ContactPage() {
                       placeholder="+33 X XX XX XX XX"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="typeContact" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                      Type de demande
-                    </label>
-                    <div className="relative">
-                      <select
-                        id="typeContact"
-                        name="typeContact"
-                        value={formData.typeContact}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm appearance-none pr-8"
-                      >
-                        <option value="general">Demande générale</option>
-                        <option value="projet">Projet de développement</option>
-                        <option value="stage">Opportunité de stage</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="formation">Formation/Mentoring</option>
-                      </select>
-                      <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-[#DFA49A] pointer-events-none"></i>
-                    </div>
-                  </div>
                 </div>
 
                 <div>
@@ -359,28 +338,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#421734] mb-4">Ma Localisation</h2>
-            <p className="text-lg text-gray-600">Basée en région parisienne, disponible pour des rencontres et collaborations locales</p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-[#C98A8A]/30">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.77824705821!2d2.254627999999999!3d48.906399999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc60ad57d07%3A0x40b82c3688c9460!2sClichy%2C%20France!5e0!3m2!1sen!2sfr!4v1234567890123"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation Clichy, France"
-            ></iframe>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-[#421734] py-12">

@@ -6,6 +6,7 @@ export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('tous');
   const [isVeilleOpen, setIsVeilleOpen] = useState(false);
   const [showFullVeille, setShowFullVeille] = useState(false);
+  const [showProjectDetailsModal, setShowProjectDetailsModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ export default function PortfolioPage() {
       title: "Blog sur la Réalité Virtuelle",
       category: "web",
       description: "Site web informatif explorant les différences entre la réalité virtuelle et la réalité augmentée",
+      fullDescription: "Ce projet consiste en la conception et le développement d'un site web informatif dédié à la réalité virtuelle (VR) et à la réalité augmentée (AR). L'objectif principal était de vulgariser ces technologies en expliquant leurs différences, leurs usages ainsi que leurs impacts dans des domaines variés comme les jeux vidéo, la médecine ou encore l'éducation.\n\nDans ce cadre, j'ai développé une interface moderne, responsive et structurée, permettant une navigation fluide sur tous les types d'écrans (ordinateur, tablette et mobile). Le site est organisé en plusieurs sections thématiques avec une hiérarchisation claire des contenus afin de faciliter la compréhension pour l'utilisateur.\n\nJ'ai particulièrement travaillé sur une section dédiée aux enjeux de la réalité virtuelle, dans laquelle j'aborde :\n\n- les défis techniques (latence, qualité graphique, immersion, accessibilité),\n- les enjeux sécuritaires (protection des données, cybersécurité, sécurité physique),\n- ainsi que les problématiques éthiques (addiction, manipulation, impact social).\n\nCette partie du projet m'a permis de structurer des contenus complexes et de les rendre accessibles à un public large.\n\nJ'ai également intégré des interactions dynamiques en JavaScript afin d'améliorer l'expérience utilisateur, notamment à travers des boutons interactifs, une navigation fluide et des éléments de contenu conditionnels. Une section participative a aussi été mise en place pour encourager l'utilisateur à donner son avis et interagir avec le site.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/2e49970dddcfd7605b36fe176a65266a.png",
       tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
       github: "https://github.com/Christian-Tasseu/Volet_Auto.git",
@@ -31,6 +33,7 @@ export default function PortfolioPage() {
       title: "Système de Gestion des Utilisateurs (SGU)",
       category: "web",
       description: "Système complet de gestion des utilisateurs avec interface d'administration et génération de rapports PDF",
+      fullDescription: "Ce projet consiste en la conception et le développement d'une application web complète de gestion des utilisateurs, intégrant un système d'authentification sécurisé et une gestion des rôles (administrateur et utilisateur).\n\nL'objectif principal était de mettre en place une solution permettant de gérer efficacement les comptes utilisateurs à travers une interface d'administration intuitive, tout en respectant les bonnes pratiques de sécurité.\n\nJ'ai développé l'ensemble de la logique backend en PHP, en m'appuyant sur une base de données MySQL pour le stockage des informations. L'application permet une gestion complète des utilisateurs (CRUD), incluant l'ajout, la modification, la suppression et la consultation des comptes via un espace administrateur dédié.\n\nLe projet repose sur une architecture organisée inspirée du modèle MVC, avec une séparation claire entre :\n\n- les modèles (gestion des données),\n- les contrôleurs (logique métier),\n- et les vues (interface utilisateur).\n\nJ'ai également mis en place un système d'authentification complet avec gestion des sessions, permettant de restreindre l'accès aux صفحات selon le rôle de l'utilisateur. Des middlewares ont été utilisés pour sécuriser les routes sensibles.\n\nUne attention particulière a été portée à la sécurité :\n\n- utilisation de requêtes préparées avec PDO pour éviter les injections SQL,\n- hachage des mots de passe avec password_hash() et vérification avec password_verify(),\n- validation et nettoyage des données utilisateurs (htmlspecialchars, filter_var),\n- contrôle d'accès basé sur les rôles.\n\nL'application propose également :\n\n- un tableau de bord dynamique selon le rôle,\n- une interface d'administration pour la gestion des utilisateurs,\n- ainsi qu'un système de génération de rapports au format PDF pour l'export des données.\n\nEn complément, j'ai rédigé une documentation technique et utilisateur, décrivant l'architecture du projet, la structure des fichiers, ainsi que les étapes d'utilisation de l'application (connexion, gestion des utilisateurs, navigation).\n\nCe projet m'a permis de renforcer mes compétences en développement backend, en gestion de base de données, en structuration d'application web et en sécurisation des systèmes.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/06a387c69a9d7d895fe5e43331967ccf.png",
       tags: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "PHP", "PDF"],
       github: "https://github.com/Enami-code770/sgu1.0.git",
@@ -40,6 +43,7 @@ export default function PortfolioPage() {
       title: "GameHub - Catalogue de Jeux Vidéo",
       category: "application",
       description: "Application web permettant aux utilisateurs de découvrir des jeux vidéo et de les ajouter à leurs favoris",
+      fullDescription: "GameHub est une application web dynamique permettant aux utilisateurs de découvrir des jeux vidéo et de gérer une liste personnalisée de favoris. Ce projet a été entièrement réalisé en autonomie, de la conception à l'implémentation.\n\nL'objectif était de développer une plateforme interactive reposant sur une base de données, capable d'afficher dynamiquement des contenus et de gérer les interactions utilisateurs.\n\nJ'ai conçu et structuré une base de données MySQL comprenant plusieurs entités, notamment les utilisateurs, les jeux et les favoris. Un schéma de conception (diagramme Entité-Relation) a été réalisé en amont afin d'organiser les relations entre les données.\n\nLe backend a été développé en PHP, avec une gestion complète :\n\n- de l'authentification (inscription, connexion, déconnexion),\n- du traitement des formulaires,\n- et de la communication avec la base de données.\n\nL'application permet :\n\n- d'afficher dynamiquement une liste de jeux depuis la base de données,\n- d'ajouter ou retirer des jeux des favoris,\n- d'accéder à une page personnalisée contenant les jeux favoris de l'utilisateur.\n\nLe frontend a été conçu avec HTML, CSS et Bootstrap pour garantir une interface responsive et intuitive. JavaScript a été utilisé pour améliorer l'interactivité côté client.\n\nLe projet est organisé de manière structurée avec :\n\n- un dossier assets/ contenant les ressources (CSS, JavaScript, images, vidéos),\n- des fichiers de configuration (config.php, db.php) pour la connexion à la base de données,\n- des scripts dédiés au traitement des actions utilisateurs (inscription, connexion),\n- et plusieurs pages dynamiques (accueil, favoris, authentification).\n\nCe projet m'a permis de développer des compétences solides en :\n\n- gestion de base de données relationnelle,\n- développement backend en PHP,\n- structuration d'une application web,\n- et gestion des interactions utilisateur.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/9f20041a492c8ca60147ddda9299c90c.png",
       tags: ["PHP", "JavaScript", "CSS", "Bootstrap", "MySQL Workbench"],
       github: "https://github.com/Enami-code770/GameHub.git", 
@@ -49,6 +53,7 @@ export default function PortfolioPage() {
       title: "Volet Automatique Intelligent",
       category: "web",
       description: "Interface interactive avec un volet automation qui s'ouvre ou se ferme automatiquement en fonction de l'intensité lumineuse",
+      fullDescription: "Ce projet consiste en la simulation d'un système de volet automatique intelligent capable de s'ouvrir ou de se fermer en fonction de l'intensité lumineuse. Il a été réalisé en groupe, avec une participation centrée sur le développement du front-end.\n\nJ'ai contribué à la conception et à l'intégration de l'interface utilisateur en HTML et CSS, en veillant à proposer une représentation visuelle claire et interactive du fonctionnement du volet. L'objectif était de permettre à l'utilisateur de comprendre facilement le comportement du système à travers une simulation graphique.\n\nLa logique du projet repose sur JavaScript, où j'ai participé à la mise en place de conditions permettant de déclencher automatiquement l'ouverture ou la fermeture du volet en fonction d'un seuil de luminosité. Le système réagit en temps réel aux interactions de l'utilisateur, simulant ainsi un environnement intelligent.\n\nCe projet m'a permis de renforcer mes compétences en :\n\n- manipulation du DOM,\n- gestion des événements en JavaScript,\n- logique conditionnelle,\n- et développement d'interfaces interactives.\n\nIl m'a également permis de travailler en équipe, en répartissant les tâches et en coordonnant l'intégration des différentes parties du projet.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/fc11c3429732ea36dfa4e8312addc36c.png",
       tags: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/Christian-Tasseu/Volet_Auto.git",
@@ -58,6 +63,7 @@ export default function PortfolioPage() {
       title: "Application de Demande de Devis Plomberie",
       category: "web",
       description: "Application web pour demander des devis de services de dépannage en plomberie avec formulaire interactif",
+      fullDescription: "Ce projet a été réalisé dans le cadre de mon stage et consiste en le développement d'une fonctionnalité de demande de devis pour un site web de services de dépannage en plomberie.\n\nJ'ai été en charge de la conception et du développement de la partie contact, permettant aux utilisateurs d'envoyer des demandes de devis via un formulaire interactif. L'objectif était de faciliter la prise de contact entre les clients et l'entreprise, tout en garantissant la fiabilité des données transmises.\n\nJ'ai conçu une interface claire et responsive en HTML, CSS et Bootstrap, intégrant plusieurs champs (nom, prénom, email, sujet, message). Des validations côté client ont été mises en place en JavaScript afin d'améliorer l'expérience utilisateur et de limiter les erreurs de saisie.\n\nCôté backend, j'ai développé le traitement du formulaire en PHP avec connexion à une base de données MySQL via PDO. Les données sont sécurisées et nettoyées (htmlspecialchars) avant d'être insérées dans la base de données à l'aide de requêtes préparées, afin de prévenir les injections SQL.\n\nLes messages envoyés par les utilisateurs sont enregistrés dans une table dédiée, permettant leur consultation ultérieure par l'entreprise.\n\nCe projet m'a permis de mettre en pratique :\n\n- la gestion complète d'un formulaire (front-end + back-end),\n- la connexion et manipulation d'une base de données,\n- la sécurisation des données utilisateurs,\n- et le développement dans un contexte professionnel réel.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/8f4ea06d26efd94b875bfa0b9cbac464.png",
       tags: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
       github: "#",
@@ -67,6 +73,7 @@ export default function PortfolioPage() {
       title: "Intranet d'Entreprise CoreFlow",
       category: "application",
       description: "Plateforme intranet complète en cours de développement pour la gestion des congés, tickets et événements d'entreprise",
+      fullDescription: "CoreFlow est une plateforme intranet d'entreprise développée dans le cadre du BTS SIO (épreuve E5), visant à centraliser la gestion des ressources humaines et améliorer la communication interne au sein d'une organisation.\n\nCe projet, réalisé en équipe (10 personnes avec un travail en binôme), consiste à concevoir une application web moderne reposant sur une architecture complète front-end / back-end.\n\nL'application permet aux utilisateurs de :\n\n- gérer leurs demandes de congés,\n- créer et participer à des événements internes (réunions, formations, ateliers),\n- ouvrir et suivre des tickets de support,\n- accéder à des documents selon leur rôle.\n\nLe système intègre une authentification sécurisée ainsi qu'une gestion avancée des rôles (Administrateur, Manager, RH, Employé), permettant de définir des droits d'accès précis et adaptés à chaque utilisateur.\n\n**Missions réalisées**\n\nDans ce projet, j'ai été spécifiquement en charge, en binôme, de la gestion des événements, aussi bien côté backend que frontend.\n\n**Backend (Node.js) :**\n\n- Développement d'API REST pour la gestion des événements :\n  - suppression d'événements (DELETE)\n  - récupération des événements passés (GET)\n  - récupération des événements à venir (GET)\n- Mise en place de routes sécurisées avec gestion des rôles utilisateurs\n- Participation à la structuration du code (controllers, routes, models, middlewares)\n\n**Frontend (Vue.js) :**\n\n- Développement des interfaces d'affichage des événements\n- Création de pages dynamiques permettant de :\n  - afficher les événements passés et à venir\n  - adapter l'affichage selon le rôle de l'utilisateur\n- Intégration avec les API backend pour un affichage en temps réel\n\n**Fonctionnalités développées (gestion des événements)**\n- Création d'événements (Admin, Manager)\n- Modification et suppression avec gestion des droits\n- Consultation des événements selon le rôle\n- Filtrage des événements (passés / à venir)\n- Gestion des participants (invitation par email ou par département)\n\n**Architecture du projet**\n\nLe projet est structuré de manière professionnelle avec :\n\n- un backend Node.js organisé en controllers, routes, models et middlewares\n- un frontend Vue.js basé sur des composants, vues et un système de routing\n- une base de données (MySQL) pour la gestion des utilisateurs et des données métier\n- une documentation technique (installation, API, organisation du projet)\n\n**Apports et compétences développées**\n\nCe projet m'a permis de :\n\n- travailler sur une architecture web complète (full-stack),\n- comprendre le fonctionnement des API REST,\n- manipuler Vue.js pour créer des interfaces dynamiques,\n- collaborer en équipe avec une organisation structurée (répartition des tâches, Git),\n- gérer des problématiques réelles de droits d'accès et de logique métier.",
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/838ae924a13129e2b2a40ca15a8e9295.png",
       tags: ["Vue.js", "Node.js", "JavaScript"],
       github: "https://github.com/2026-BTS-SIO2-ESIC/CoreFlow.git",
@@ -166,7 +173,6 @@ export default function PortfolioPage() {
     { key: 'web', label: 'Développement Web' },
     { key: 'application', label: 'Applications' },
     { key: 'mobile', label: 'Mobile' },
-    { key: 'backend', label: 'Backend' }
   ];
 
   const filteredProjects = activeFilter === 'tous' 
@@ -186,6 +192,11 @@ export default function PortfolioPage() {
 
   const handleDemoClick = (project: any) => {
     setSelectedProject(project);
+    setShowProjectDetailsModal(true);
+  };
+
+  const handleRequestDemo = () => {
+    setShowProjectDetailsModal(false);
     setShowDemoModal(true);
     setSubmitSuccess(false);
   };
@@ -243,7 +254,7 @@ export default function PortfolioPage() {
                   onClick={() => setIsVeilleOpen(!isVeilleOpen)}
                   className="px-3 py-2 rounded-lg transition-colors bg-[#B2174A] text-white flex items-center whitespace-nowrap cursor-pointer"
                 >
-                  Portfolio
+                  Projets
                   <i className={`ri-arrow-down-s-line ml-1 transition-transform w-4 h-4 flex items-center justify-center ${isVeilleOpen ? 'rotate-180' : ''}`}></i>
                 </button>
                 {isVeilleOpen && (
@@ -296,7 +307,7 @@ export default function PortfolioPage() {
       <section className="pt-24 pb-12 bg-gradient-to-br from-[#421734] to-[#5A1F2E]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">Mon Portfolio</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">Mes Projets</h1>
             <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed mb-8">
               Découvrez mes projets de développement web, applications et ma veille technologique. 
               Chaque projet reflète ma passion pour les technologies modernes et mon apprentissage continu.
@@ -384,7 +395,7 @@ export default function PortfolioPage() {
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[#B2174A] to-[#C8514D] mx-auto mb-6"></div>
             <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed">
-              Low-Code & No-Code : L'avenir du développement d'applications
+              Low-Code & No-Code : l'avenir du développement d'apps
             </p>
           </div>
           
@@ -532,69 +543,67 @@ export default function PortfolioPage() {
                   <p className="text-[#DFA49A]">Découvrez des tutoriels et analyses sur le Low-Code & No-Code</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
-                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
-                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
-                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="youtube.com/watch?v=..."
-                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
-                      />
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Vidéo 1: No-Code */}
+                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/40 transform hover:-translate-y-2">
+                    <div className="relative w-full aspect-video bg-black overflow-hidden rounded-t-2xl">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/XjpyYtnAR0g?modestbranding=1&rel=0&controls=1"
+                        title="Mouvement No-Code"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                    <div className="p-6">
-                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #1</h4>
-                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
-                      <div className="flex items-center text-xs text-[#C8514D]">
-                        <i className="ri-video-line mr-2"></i>
-                        Cliquez pour ajouter
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
-                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
-                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
-                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="youtube.com/watch?v=..."
-                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #2</h4>
-                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
-                      <div className="flex items-center text-xs text-[#C8514D]">
-                        <i className="ri-video-line mr-2"></i>
-                        Cliquez pour ajouter
+                    <div className="p-6 bg-[#2A2224]">
+                      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#DFA49A] transition-colors duration-300">🚀 Mouvement No-Code</h4>
+                      <p className="text-sm text-[#DFA49A]/80 mb-4 leading-relaxed">Explorez l'essor du mouvement No-Code et comment il transforme le développement d'applications en 2025. Découvrez comment les équipes peuvent créer des solutions sans écrire une seule ligne de code.</p>
+                      <div className="flex items-center justify-between pt-3 border-t border-[#421734]">
+                        <div className="flex items-center text-xs text-[#C8514D] font-medium">
+                          <i className="ri-youtube-line mr-2 text-red-500"></i>
+                          YouTube
+                        </div>
+                        <a 
+                          href="https://www.youtube.com/watch?v=XjpyYtnAR0g" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#B2174A] hover:text-[#DFA49A] transition-colors duration-300 font-medium text-sm flex items-center gap-1"
+                        >
+                          Voir complet <i className="ri-external-link-line"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
 
-                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/20 transform hover:-translate-y-1">
-                    <div className="relative bg-black h-48 flex items-center justify-center overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#421734]/80 group-hover:from-[#421734]/40 transition-all duration-300"></div>
-                      <div className="w-16 h-16 bg-[#B2174A] rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
-                        <i className="ri-play-fill text-white text-3xl ml-1"></i>
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="youtube.com/watch?v=..."
-                        className="absolute inset-0 w-full h-full px-4 py-3 text-sm opacity-0 hover:opacity-100 focus:opacity-100 bg-[#2A2224] border border-[#5A1F2E] transition-opacity duration-300"
-                      />
+                  {/* Vidéo 2: Low-Code */}
+                  <div className="group bg-[#2A2224] rounded-2xl overflow-hidden border border-[#5A1F2E] hover:border-[#B2174A] transition-all duration-300 hover:shadow-2xl hover:shadow-[#B2174A]/40 transform hover:-translate-y-2">
+                    <div className="relative w-full aspect-video bg-black overflow-hidden rounded-t-2xl">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/vV_uA-T5DMc?modestbranding=1&rel=0&controls=1"
+                        title="Low-Code : L'accélérateur Pro"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                    <div className="p-6">
-                      <h4 className="text-lg font-bold text-white mb-2">Votre vidéo #3</h4>
-                      <p className="text-sm text-[#DFA49A]/80 mb-4">Collez le lien YouTube directement sur la vidéo</p>
-                      <div className="flex items-center text-xs text-[#C8514D]">
-                        <i className="ri-video-line mr-2"></i>
-                        Cliquez pour ajouter
+                    <div className="p-6 bg-[#2A2224]">
+                      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#DFA49A] transition-colors duration-300">⚡ Low-Code : L'accélérateur Pro</h4>
+                      <p className="text-sm text-[#DFA49A]/80 mb-4 leading-relaxed">Découvrez comment le Low-Code accélère le développement professionnel et optimise la productivité. Apprenez à combiner la simplicité du No-Code avec la puissance du code pour des solutions enterprise.</p>
+                      <div className="flex items-center justify-between pt-3 border-t border-[#421734]">
+                        <div className="flex items-center text-xs text-[#C8514D] font-medium">
+                          <i className="ri-youtube-line mr-2 text-red-500"></i>
+                          YouTube
+                        </div>
+                        <a 
+                          href="https://www.youtube.com/watch?v=vV_uA-T5DMc" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#B2174A] hover:text-[#DFA49A] transition-colors duration-300 font-medium text-sm flex items-center gap-1"
+                        >
+                          Voir complet <i className="ri-external-link-line"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -641,6 +650,75 @@ export default function PortfolioPage() {
           </Link>
         </div>
       </section>
+
+      {/* Project Details Modal */}
+      {showProjectDetailsModal && selectedProject && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-2xl w-full my-8 relative border-4 border-[#C98A8A]/30">
+            <button
+              onClick={() => setShowProjectDetailsModal(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-[#B2174A] cursor-pointer z-10"
+            >
+              <i className="ri-close-line text-2xl w-6 h-6 flex items-center justify-center"></i>
+            </button>
+            
+            <div className="max-h-96 overflow-y-auto">
+              {/* Project Image */}
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-64 object-cover object-top"
+              />
+              
+              <div className="p-8">
+                <h2 className="text-3xl font-bold text-[#421734] mb-4">{selectedProject.title}</h2>
+                
+                {/* Description complète */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-bold text-[#421734] mb-3">Description</h3>
+                  <p className="text-gray-600 leading-relaxed mb-3">{selectedProject.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{selectedProject.fullDescription}</p>
+                </div>
+                
+                {/* Technologies */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-bold text-[#421734] mb-3">Technologies utilisées</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.tags.map((tag: string, index: number) => (
+                      <span
+                        key={index}
+                        className="bg-[#DFA49A]/30 text-[#5A1F2E] px-4 py-2 rounded-full text-sm font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Actions */}
+                <div className="flex gap-4 pt-4 border-t border-[#DFA49A]/20">
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-[#421734] px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+                  >
+                    <i className="ri-github-line"></i>
+                    Voir le code
+                  </a>
+                  <button
+                    onClick={handleRequestDemo}
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#B2174A] text-white px-6 py-3 rounded-lg hover:bg-[#C8514D] transition-colors font-medium"
+                  >
+                    <i className="ri-mail-line"></i>
+                    Demander une démo
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Demo Request Modal */}
       {showDemoModal && (

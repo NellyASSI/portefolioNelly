@@ -4,42 +4,25 @@ import { useState } from 'react';
 
 export default function CertificationsPage() {
   const [activeCategory, setActiveCategory] = useState('tous');
+  const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
 
   const certifications = [
     {
       id: 1,
-      category: 'cnil',
+      category: 'CNIL',
       title: 'Attestation CNIL - Protection des Données',
       description: 'Formation sur la protection des données personnelles et le RGPD',
-      date: '2024',
-      image: 'https://readdy.ai/api/search-image?query=CNIL%20data%20protection%20certification%20document%2C%20GDPR%20compliance%20certificate%2C%20professional%20legal%20document%2C%20data%20privacy%20training%2C%20official%20French%20certification&width=400&height=300&seq=cert1&orientation=landscape',
-      pdfLink: '/documents/attestations/CNIL_Protection_Donnees.pdf'
-    },
-    {
-      id: 2,
-      category: 'cnil',
-      title: 'RGPD et Conformité Numérique',
-      description: 'Certification sur les règles de conformité RGPD pour les développeurs',
-      date: '2024',
-      image: 'https://readdy.ai/api/search-image?query=GDPR%20compliance%20certificate%2C%20digital%20privacy%20certification%2C%20European%20data%20protection%20document%2C%20professional%20training%20certificate%2C%20legal%20compliance&width=400&height=300&seq=cert2&orientation=landscape',
-      pdfLink: '/documents/attestations/RGPD_Conformite_Numerique.pdf'
-    },
-    {
-      id: 3,
-      category: 'cybersecurite',
-      title: 'Cyber Sécurité - Niveau Fondamental',
-      description: 'Formation aux bases de la cybersécurité et aux bonnes pratiques',
-      date: '2024',
-      image: 'https://readdy.ai/api/search-image?query=cybersecurity%20certification%20document%2C%20information%20security%20training%20certificate%2C%20digital%20security%20credential%2C%20professional%20IT%20security%20certification%2C%20network%20protection&width=400&height=300&seq=cert3&orientation=landscape',
-      pdfLink: '/documents/attestations/Cyber_Securite_Fondamental.pdf'
+      date: '2025',
+      image: '',
+      pdfLink: '/documents/CNIL_RGPD.pdf'
     },
     {
       id: 4,
       category: 'cybersecurite',
       title: 'Sécurité des Applications Web',
       description: 'Certification sur la sécurisation des applications web et des API',
-      date: '2023',
-      image: 'https://readdy.ai/api/search-image?query=web%20application%20security%20certificate%2C%20API%20security%20training%20document%2C%20software%20security%20certification%2C%20professional%20cybersecurity%20credential%2C%20secure%20coding&width=400&height=300&seq=cert4&orientation=landscape',
+      date: '2025',
+      image: '',
       pdfLink: '/documents/attestations/Securite_Applications_Web.pdf'
     },
     {
@@ -47,8 +30,8 @@ export default function CertificationsPage() {
       category: 'stage',
       title: 'Rapport de Stage - Développement Web',
       description: 'Stage de développement web chez une entreprise technologique',
-      date: '2023',
-      image: 'https://readdy.ai/api/search-image?query=internship%20report%20document%2C%20professional%20training%20report%2C%20web%20development%20internship%20certificate%2C%20business%20report%20cover%2C%20academic%20document&width=400&height=300&seq=cert5&orientation=landscape',
+      date: '2025',
+      image: '',
       pdfLink: '/documents/rapports/Rapport_Stage_Developpement_Web.pdf'
     },
     {
@@ -56,17 +39,17 @@ export default function CertificationsPage() {
       category: 'stage',
       title: 'Rapport de Stage - Gestion de Projet',
       description: 'Expérience en gestion de projet informatique et méthodologies agiles',
-      date: '2023',
-      image: 'https://readdy.ai/api/search-image?query=project%20management%20internship%20report%2C%20agile%20methodology%20training%20document%2C%20professional%20experience%20report%2C%20IT%20project%20certificate%2C%20business%20document&width=400&height=300&seq=cert6&orientation=landscape',
+      date: '2026 ',
+      image: '',
       pdfLink: '/documents/rapports/Rapport_Stage_Gestion_Projet.pdf'
     },
     {
       id: 7,
-      category: 'alternance',
-      title: 'Contrat d\'Alternance - BTS SIO',
+      category: 'Fiche de compétences',
+      title: 'Fiche de compétence E5 - BTS SIO',
       description: 'Alternance en développement logiciel et applications métiers',
       date: '2024',
-      image: 'https://readdy.ai/api/search-image?query=apprenticeship%20contract%20document%2C%20professional%20training%20certificate%2C%20BTS%20SIO%20diploma%2C%20work-study%20program%20certificate%2C%20educational%20credential&width=400&height=300&seq=cert7&orientation=landscape',
+      image: '',
       pdfLink: '/documents/rapports/Contrat_Alternance_BTS_SIO.pdf'
     }
   ];
@@ -98,7 +81,7 @@ export default function CertificationsPage() {
                 À propos
               </Link>
               <Link href="/portfolio" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A] whitespace-nowrap cursor-pointer">
-                Portfolio
+                Projets
               </Link>
               <Link href="/certifications" className="px-3 py-2 rounded-lg transition-colors bg-[#B2174A] text-white whitespace-nowrap cursor-pointer">
                 Attestations/Rapports
@@ -133,28 +116,75 @@ export default function CertificationsPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white border-b border-[#DFA49A]/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#B2174A] mb-2">{certifications.filter(c => c.category === 'cnil').length}</div>
-              <div className="text-gray-600">Attestations CNIL</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#C8514D] mb-2">{certifications.filter(c => c.category === 'cybersecurite').length}</div>
-              <div className="text-gray-600">Cyber Sécurité</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#7D527A] mb-2">{certifications.filter(c => c.category === 'stage').length}</div>
-              <div className="text-gray-600">Rapports de Stage</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#C98A8A] mb-2">{certifications.filter(c => c.category === 'alternance').length}</div>
-              <div className="text-gray-600">Alternance</div>
+<section className="py-12 bg-white border-b border-[#DFA49A]/20">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* STATE pour aperçu */}
+    {typeof window !== "undefined" && (
+      <>
+        {selectedPdf && (
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+            <div className="bg-white w-[90%] h-[90%] rounded-lg overflow-hidden relative">
+              
+              <button
+                onClick={() => setSelectedPdf(null)}
+                className="absolute top-4 right-4 text-black text-xl z-50"
+              >
+                ✕
+              </button>
+
+              <iframe src={selectedPdf} className="w-full h-full"></iframe>
             </div>
           </div>
+        )}
+      </>
+    )}
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+      {/* CNIL */}
+      <div className="text-center cursor-pointer"
+        onClick={() => setSelectedPdf("src/app/documents/CNIL RGPD.pdf")}
+      >
+        <div className="text-4xl font-bold text-[#B2174A] mb-2">
+          {certifications.filter(c => c.category === 'cnil').length}
         </div>
-      </section>
+        <div className="text-gray-600">Attestations CNIL</div>
+      </div>
+
+      {/* Cyber */}
+      <div className="text-center cursor-pointer"
+        onClick={() => setSelectedPdf("src/app/documents/Attestation de suivie CyberSécuriter.pdf")}
+      >
+        <div className="text-4xl font-bold text-[#C8514D] mb-2">
+          {certifications.filter(c => c.category === 'cybersecurite').length}
+        </div>
+        <div className="text-gray-600">Cyber Sécurité</div>
+      </div>
+
+      {/* Stage */}
+      <div className="text-center cursor-pointer"
+        onClick={() => setSelectedPdf("src/app/documents/Rapport de stage 1er Année BTS sio Option slam 2.pdf")}
+      >
+        <div className="text-4xl font-bold text-[#7D527A] mb-2">
+          {certifications.filter(c => c.category === 'stage').length}
+        </div>
+        <div className="text-gray-600">Rapports de Stage</div>
+      </div>
+
+      {/* Fiche */}
+      <div className="text-center cursor-pointer"
+        onClick={() => setSelectedPdf("src/app/documents/Fiche E5 Nelly definitly.pdf")}
+      >
+        <div className="text-4xl font-bold text-[#C98A8A] mb-2">
+          {certifications.filter(c => c.category === 'alternance').length}
+        </div>
+        <div className="text-gray-600">Fiche de compétences</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b border-[#DFA49A]/20">
@@ -260,16 +290,6 @@ export default function CertificationsPage() {
               <h3 className="text-lg font-bold text-white mb-2">Expérience Pratique</h3>
               <p className="text-[#DFA49A] text-sm">
                 Stages en entreprise et projets réels
-              </p>
-            </div>
-            
-            <div className="bg-[#2A2224] p-6 rounded-xl text-center border border-[#5A1F2E]">
-              <div className="w-16 h-16 bg-[#C98A8A] rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-graduation-cap-line text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">Formation Continue</h3>
-              <p className="text-[#DFA49A] text-sm">
-                Apprentissage et développement des compétences
               </p>
             </div>
           </div>
