@@ -13,7 +13,7 @@ export default function CertificationsPage() {
       title: 'Attestation CNIL - Protection des Données',
       description: 'Formation sur la protection des données personnelles et le RGPD',
       date: '2025',
-      image: '',
+      image: '/images/cnil.jpeg',
       pdfLink: '/public/documents/CNIL_RGPD.pdf'
     },
     {
@@ -22,7 +22,7 @@ export default function CertificationsPage() {
       title: 'Sécurité des Applications Web',
       description: 'Certification sur la sécurisation des applications web et des API',
       date: '2025',
-      image: '',
+      image: '/images/cyber.jpeg',
       pdfLink: '/documents/attestation_de_suivie_cybersecurite.pdf'
     },
     {
@@ -31,8 +31,8 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Développement Web',
       description: 'Stage de développement web chez une entreprise technologique',
       date: '2025',
-      image: '',
-      pdfLink: '/public/documents/rapports/Rapport_Stage_Developpement_Web.pdf'
+      image: '/images/rapport1.jpeg',
+      pdfLink: '/documents/rapport_de_stage_1.pdf'
     },
     {
       id: 6,
@@ -40,8 +40,8 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Gestion de Projet',
       description: 'Expérience en gestion de projet informatique et méthodologies agiles',
       date: '2026 ',
-      image: '',
-      documents: '/documents/rapports/Rapport_Stage_Gestion_Projet.pdf'
+      image: '/images/rapport2.jpeg',
+      pdfLink: '/documents/rapport_de_stage_2.pdf'
     },
     {
       id: 7,
@@ -49,8 +49,8 @@ export default function CertificationsPage() {
       title: 'Fiche de compétence E5 - BTS SIO',
       description: 'Alternance en développement logiciel et applications métiers',
       date: '2024',
-      image: '',
-      pdfLink: '/documents/rapports/Contrat_Alternance_BTS_SIO.pdf'
+      image: '/images/e5.jpeg',
+      pdfLink: '/documents/fiche5.pdf'
     }
   ];
 
