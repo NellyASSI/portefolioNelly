@@ -14,7 +14,7 @@ export default function CertificationsPage() {
       description: 'Formation sur la protection des données personnelles et le RGPD',
       date: '2025',
       image: '',
-      pdfLink: '/documents/CNIL_RGPD.pdf'
+      pdfLink: '/public/documents/CNIL_RGPD.pdf'
     },
     {
       id: 4,
@@ -23,7 +23,7 @@ export default function CertificationsPage() {
       description: 'Certification sur la sécurisation des applications web et des API',
       date: '2025',
       image: '',
-      pdfLink: '/documents/attestations/Securite_Applications_Web.pdf'
+      pdfLink: '/documents/attestation_de_suivie_cybersecurite.pdf'
     },
     {
       id: 5,
@@ -32,7 +32,7 @@ export default function CertificationsPage() {
       description: 'Stage de développement web chez une entreprise technologique',
       date: '2025',
       image: '',
-      pdfLink: '/documents/rapports/Rapport_Stage_Developpement_Web.pdf'
+      pdfLink: '/public/documents/rapports/Rapport_Stage_Developpement_Web.pdf'
     },
     {
       id: 6,
@@ -41,7 +41,7 @@ export default function CertificationsPage() {
       description: 'Expérience en gestion de projet informatique et méthodologies agiles',
       date: '2026 ',
       image: '',
-      pdfLink: '/documents/rapports/Rapport_Stage_Gestion_Projet.pdf'
+      documents: '/documents/rapports/Rapport_Stage_Gestion_Projet.pdf'
     },
     {
       id: 7,
@@ -59,7 +59,6 @@ export default function CertificationsPage() {
     { key: 'cnil', label: 'Attestations CNIL', icon: 'ri-shield-check-line' },
     { key: 'cybersecurite', label: 'Cyber Sécurité', icon: 'ri-lock-line' },
     { key: 'stage', label: 'Rapports de Stage', icon: 'ri-briefcase-line' },
-    { key: 'alternance', label: 'Alternance', icon: 'ri-graduation-cap-line' }
   ];
 
   const filteredCertifications = activeCategory === 'tous' 
