@@ -144,7 +144,7 @@ export default function AboutPage() {
               {/* CTA Button */}
               <a 
                 href="/documents/cvalternance.pdf" 
-                download="cvalternance.pdf"
+                download="/documents/cvalternance.pdf"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B2174A] to-[#C8514D] text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-[#B2174A]/40 transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer group"
               >
                 <i className="ri-download-line text-xl mr-3 w-5 h-5 flex items-center justify-center group-hover:animate-bounce"></i>

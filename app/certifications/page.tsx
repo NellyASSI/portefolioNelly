@@ -13,7 +13,7 @@ export default function CertificationsPage() {
       title: 'Attestation CNIL - Protection des Données',
       description: 'Formation sur la protection des données personnelles et le RGPD',
       date: '2025',
-      image: '/documents/images/cnil.jpeg',
+      image: '/images/cnil.jpeg',
       pdfLink: '/documents/attestation_de_suivi_rgpd.pdf'
     },
     {
@@ -22,7 +22,7 @@ export default function CertificationsPage() {
       title: 'Sécurité des Applications Web',
       description: 'Certification sur la sécurisation des applications web et des API',
       date: '2025',
-      image: '/documents/images/cyber.jpeg',
+      image: '/images/cyber.jpeg',
       pdfLink: '/documents/attestation_de_suivie_cybersecurite.pdf'
     },
     {
@@ -31,7 +31,7 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Développement Web',
       description: 'Stage de développement web chez une entreprise technologique',
       date: '2025',
-      image: '/documents/images/rapport1.jpeg',
+      image: '/images/rapport1.jpeg',
       pdfLink: '/documents/rapport_de_stage_1.pdf'
     },
     {
@@ -40,7 +40,7 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Gestion de Projet',
       description: 'Expérience en gestion de projet informatique et méthodologies agiles',
       date: '2026',
-      image: '/documents/images/rapport2.jpeg',
+      image: '/images/rapport2.jpeg',
       pdfLink: '/documents/rapport_de_stage_2.pdf'
     },
     {
@@ -49,7 +49,7 @@ export default function CertificationsPage() {
       title: 'Fiche de compétence E5 - BTS SIO',
       description: 'Alternance en développement logiciel et applications métiers',
       date: '2026',
-      image: '/documents/images/e5.jpeg',
+      image: '/images/e5.jpeg',
       pdfLink: '/documents/fiche5.pdf'
     },
   ];
@@ -118,25 +118,21 @@ export default function CertificationsPage() {
                onClick={() => setSelectedPdf("/documents/attestation_de_suivie_cybersecurite.pdf")}>
             <div className="text-4xl font-bold text-[#B2174A] mb-2 group-hover:scale-110 transition">1</div>
             <div className="text-gray-600 font-medium">CNIL RGPD</div>
-            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir l'attestation</p>
           </div>
           <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30" 
                onClick={() => setSelectedPdf("/documents/attestation_de_suivie_cybersecurite.pdf")}>
             <div className="text-4xl font-bold text-[#B2174A] mb-2 group-hover:scale-110 transition">1</div>
             <div className="text-gray-600 font-medium">Cyber Sécurité</div>
-            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir l'attestation</p>
           </div>
           <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30"
                onClick={() => setSelectedPdf("/documents/rapport_de_stage_1.pdf")}>
             <div className="text-4xl font-bold text-[#7D527A] mb-2 group-hover:scale-110 transition">2</div>
             <div className="text-gray-600 font-medium">Rapports de Stage</div>
-            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir le dernier rapport</p>
           </div>
           <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30"
                onClick={() => setSelectedPdf("/documents/fiche5.pdf")}>
             <div className="text-4xl font-bold text-[#C98A8A] mb-2 group-hover:scale-110 transition">1</div>
             <div className="text-gray-600 font-medium">Compétences E5</div>
-            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir la fiche</p>
           </div>
         </div>
       </section>
