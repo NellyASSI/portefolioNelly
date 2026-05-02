@@ -652,166 +652,119 @@ export default function PortfolioPage() {
       </section>
 
       {/* Project Details Modal */}
-      {showProjectDetailsModal && selectedProject && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-2xl w-full my-8 relative border-4 border-[#C98A8A]/30">
-            <button
-              onClick={() => setShowProjectDetailsModal(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-[#B2174A] cursor-pointer z-10"
-            >
-              <i className="ri-close-line text-2xl w-6 h-6 flex items-center justify-center"></i>
-            </button>
-            
-            <div className="max-h-96 overflow-y-auto">
-              {/* Project Image */}
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-64 object-cover object-top"
-              />
-              
-              <div className="p-8">
-                <h2 className="text-3xl font-bold text-[#421734] mb-4">{selectedProject.title}</h2>
-                
-                {/* Description complète */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-bold text-[#421734] mb-3">Description</h3>
-                  <p className="text-gray-600 leading-relaxed mb-3">{selectedProject.description}</p>
-                  <p className="text-gray-600 leading-relaxed">{selectedProject.fullDescription}</p>
-                </div>
-                
-                {/* Technologies */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-bold text-[#421734] mb-3">Technologies utilisées</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.tags.map((tag: string, index: number) => (
-                      <span
-                        key={index}
-                        className="bg-[#DFA49A]/30 text-[#5A1F2E] px-4 py-2 rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Actions */}
-                <div className="flex gap-4 pt-4 border-t border-[#DFA49A]/20">
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-[#421734] px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                  >
-                    <i className="ri-github-line"></i>
-                    Voir le code
-                  </a>
-                  <button
-                    onClick={handleRequestDemo}
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#B2174A] text-white px-6 py-3 rounded-lg hover:bg-[#C8514D] transition-colors font-medium"
-                  >
-                    <i className="ri-mail-line"></i>
-                    Demander une démo
-                  </button>
-                </div>
-              </div>
-            </div>
+      {/* Project Details Modal - Version Agrandie & Stylisée */}
+{showProjectDetailsModal && selectedProject && (
+  <div className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-[100] p-4 sm:p-6">
+    <div className="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl animate-in fade-in zoom-in duration-300 border border-[#DFA49A]/30">
+      
+      {/* Header : Image de couverture & Titre */}
+      <div className="relative h-64 md:h-96 w-full">
+        <img 
+          src={selectedProject.image} 
+          className="w-full h-full object-cover object-top"
+          alt={selectedProject.title}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2A2224] via-[#2A2224]/40 to-transparent"></div>
+        
+        {/* Bouton Fermer */}
+        <button
+          onClick={() => setShowProjectDetailsModal(false)}
+          className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center hover:bg-[#B2174A] transition-all cursor-pointer z-50 border border-white/20"
+        >
+          <i className="ri-close-line text-2xl"></i>
+        </button>
+
+        <div className="absolute bottom-10 left-10 right-10">
+          <span className="bg-[#DFA49A] text-[#421734] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4 inline-block">
+            {selectedProject.category}
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {selectedProject.title}
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {selectedProject.tags.map((tag: string, i: number) => (
+              <span key={i} className="text-white/90 border border-white/30 px-3 py-1 rounded-lg text-sm backdrop-blur-sm font-medium">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
-      )}
+      </div>
 
-      {/* Demo Request Modal */}
-      {showDemoModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-8 relative border-4 border-[#C98A8A]/30">
-            <button
-              onClick={() => setShowDemoModal(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-[#B2174A] cursor-pointer"
-            >
-              <i className="ri-close-line text-2xl w-6 h-6 flex items-center justify-center"></i>
-            </button>
-            
-            {submitSuccess ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-[#C8514D]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="ri-check-line text-[#C8514D] text-3xl"></i>
+      <div className="p-8 md:p-16">
+        {/* Section 1 : Analyse & Description */}
+        <div className="mb-20">
+          <div className="flex items-center gap-6 mb-10">
+            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Analyse du Projet</h3>
+            <div className="h-[1px] bg-[#DFA49A]/40 flex-grow"></div>
+          </div>
+          
+          <div className="columns-1 md:columns-2 gap-12 text-gray-700 leading-relaxed text-lg whitespace-pre-line prose">
+            <p className="first-letter:text-6xl first-letter:font-bold first-letter:text-[#B2174A] first-letter:mr-3 first-letter:float-left">
+              {selectedProject.fullDescription}
+            </p>
+          </div>
+        </div>
+
+        {/* Section 2 : Galerie de Démo (Les 4 Captures) */}
+        <div className="space-y-12">
+          <div className="flex items-center gap-6 mb-10">
+            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Aperçus & Captures</h3>
+            <div className="h-[1px] bg-[#DFA49A]/40 flex-grow"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {[
+              { label: "Interface de navigation", key: "screenshot1" },
+              { label: "Logique métier & Data", key: "screenshot2" },
+              { label: "Vue détaillée", key: "screenshot3" },
+              { label: "Back-office / Administration", key: "screenshot4" }
+            ].map((capture, idx) => (
+              <div key={idx} className="group flex flex-col gap-4">
+                <div className="relative rounded-2xl overflow-hidden border border-[#DFA49A]/20 bg-[#fdfafb] shadow-xl transition-all duration-500 hover:shadow-2xl">
+                  <img 
+                    src={selectedProject[capture.key as keyof typeof selectedProject] || "https://via.placeholder.com/800x450?text=Aperçu+Projet"} 
+                    alt={capture.label}
+                    className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[#421734]/0 group-hover:bg-[#421734]/5 transition-colors duration-500"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-[#421734] mb-2">Demande envoyée !</h3>
-                <p className="text-gray-600">Je vous contacterai bientôt avec les détails de la démo.</p>
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-[1px] bg-[#B2174A]"></span>
+                  <span className="text-[#421734] font-bold text-sm tracking-widest uppercase">{capture.label}</span>
+                </div>
               </div>
-            ) : (
-              <>
-                <h3 className="text-2xl font-bold text-[#421734] mb-2">Demander une démo</h3>
-                <p className="text-gray-600 mb-6">
-                  Intéressé par <span className="font-semibold text-[#B2174A]">{selectedProject?.title}</span> ? 
-                  Laissez-moi vos coordonnées et je vous enverrai les détails de la démo.
-                </p>
-                
-                <form id="demo-request-form" data-readdy-form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[#421734] mb-1">
-                      Nom complet
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full px-4 py-2 border border-[#DFA49A]/30 rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[#421734] mb-1">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full px-4 py-2 border border-[#DFA49A]/30 rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                      placeholder="votre@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[#421734] mb-1">
-                      Message (optionnel)
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      maxLength={500}
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full px-4 py-2 border border-[#DFA49A]/30 rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm resize-none"
-                      placeholder="Dites-moi ce qui vous intéresse dans ce projet..."
-                    ></textarea>
-                    <p className="text-xs text-gray-500 mt-1">{formData.message.length}/500 caractères</p>
-                  </div>
-                  
-                  <input type="hidden" name="project" value={selectedProject?.title || ''} />
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-[#B2174A] text-white px-6 py-3 rounded-lg hover:bg-[#C8514D] transition-colors font-medium whitespace-nowrap cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
-                  </button>
-                </form>
-              </>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer Modale avec Actions */}
+        <div className="mt-24 pt-10 border-t border-[#DFA49A]/20 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-6">
+            {selectedProject.github !== "#" && (
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#421734] hover:text-[#B2174A] font-bold transition-colors"
+              >
+                <i className="ri-github-fill text-2xl"></i>
+                Consulter le Code Source
+              </a>
             )}
           </div>
+          
+          <button 
+            onClick={() => setShowProjectDetailsModal(false)}
+            className="px-12 py-4 bg-[#421734] text-white rounded-2xl font-bold hover:bg-[#B2174A] transition-all transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
+          >
+            Quitter la présentation
+          </button>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Footer */}
       <footer className="bg-[#421734] py-12">

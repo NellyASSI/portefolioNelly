@@ -85,7 +85,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('images/me.jpeg')`,
+            backgroundImage: `url('/images/me.jpeg')`,
             filter: 'brightness(0.5) contrast(1.1)'
           }}
         ></div>

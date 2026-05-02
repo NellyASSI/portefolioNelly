@@ -88,7 +88,7 @@ export default function AboutPage() {
             <div className="order-1 lg:order-1 group animate-in fade-in slide-in-from-left-8 duration-700">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#5A1F2E]/50 hover:border-[#B2174A]/50 transition-all duration-500">
                 <img
-                  src="/image/Moi2"
+                  src="/images/moi2.jpg"
                   alt="Nelly étudiant en BTS SIO"
                   className="w-full h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
@@ -143,8 +143,8 @@ export default function AboutPage() {
 
               {/* CTA Button */}
               <a 
-                href="/documents/CV%20Alternance%20gpme.pdf" 
-                download="CV_Nelly_ASSI_Alternance.pdf"
+                href="/documents/cvalternance.pdf" 
+                download="cvalternance.pdf"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B2174A] to-[#C8514D] text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-[#B2174A]/40 transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer group"
               >
                 <i className="ri-download-line text-xl mr-3 w-5 h-5 flex items-center justify-center group-hover:animate-bounce"></i>

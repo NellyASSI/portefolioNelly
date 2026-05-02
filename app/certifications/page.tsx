@@ -6,7 +6,6 @@ export default function CertificationsPage() {
   const [activeCategory, setActiveCategory] = useState('tous');
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
 
-  // Chemins corrigés selon ton arborescence (Dossier public)
   const certifications = [
     {
       id: 1,
@@ -14,8 +13,8 @@ export default function CertificationsPage() {
       title: 'Attestation CNIL - Protection des Données',
       description: 'Formation sur la protection des données personnelles et le RGPD',
       date: '2025',
-      image: '/images/cnil.jpeg',
-      pdfLink: '/documents/CNIL_RGPD/votre_fichier.pdf' // VERIFIE LE NOM DANS CE DOSSIER
+      image: '/documents/images/cnil.jpeg',
+      pdfLink: '/documents/attestation_de_suivi_rgpd.pdf'
     },
     {
       id: 4,
@@ -23,7 +22,7 @@ export default function CertificationsPage() {
       title: 'Sécurité des Applications Web',
       description: 'Certification sur la sécurisation des applications web et des API',
       date: '2025',
-      image: '/images/cyber.jpeg',
+      image: '/documents/images/cyber.jpeg',
       pdfLink: '/documents/attestation_de_suivie_cybersecurite.pdf'
     },
     {
@@ -32,7 +31,7 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Développement Web',
       description: 'Stage de développement web chez une entreprise technologique',
       date: '2025',
-      image: '/images/rapport1.jpeg',
+      image: '/documents/images/rapport1.jpeg',
       pdfLink: '/documents/rapport_de_stage_1.pdf'
     },
     {
@@ -41,7 +40,7 @@ export default function CertificationsPage() {
       title: 'Rapport de Stage - Gestion de Projet',
       description: 'Expérience en gestion de projet informatique et méthodologies agiles',
       date: '2026',
-      image: '/images/rapport2.jpeg',
+      image: '/documents/images/rapport2.jpeg',
       pdfLink: '/documents/rapport_de_stage_2.pdf'
     },
     {
@@ -49,10 +48,10 @@ export default function CertificationsPage() {
       category: 'fiche',
       title: 'Fiche de compétence E5 - BTS SIO',
       description: 'Alternance en développement logiciel et applications métiers',
-      date: '2024',
-      image: '/images/e5.jpeg',
+      date: '2026',
+      image: '/documents/images/e5.jpeg',
       pdfLink: '/documents/fiche5.pdf'
-    }
+    },
   ];
 
   const categories = [
@@ -82,8 +81,8 @@ export default function CertificationsPage() {
               <Link href="/contact" className="px-3 py-2 rounded-lg transition-colors text-[#DFA49A] hover:text-[#C98A8A]">Contact</Link>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="https://github.com/NellyASSI" target="_blank" className="text-[#DFA49A]"><i className="ri-github-line text-xl"></i></a>
-              <a href="https://www.linkedin.com/in/nelly-assi-243a93336" target="_blank" className="text-[#DFA49A]"><i className="ri-linkedin-line text-xl"></i></a>
+              <a href="https://github.com/NellyASSI" target="_blank" rel="noopener noreferrer" className="text-[#DFA49A]"><i className="ri-github-line text-xl"></i></a>
+              <a href="https://www.linkedin.com/in/nelly-assi-243a93336" target="_blank" rel="noopener noreferrer" className="text-[#DFA49A]"><i className="ri-linkedin-line text-xl"></i></a>
             </div>
           </div>
         </div>
@@ -112,36 +111,66 @@ export default function CertificationsPage() {
         </div>
       )}
 
-      {/* Stats Section avec correction des liens */}
+      {/* --- STATS SECTION AJOUTÉE ICI --- */}
       <section className="py-12 bg-white border-b border-[#DFA49A]/20">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center cursor-pointer p-4 hover:bg-gray-50 rounded-xl transition" 
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30" 
                onClick={() => setSelectedPdf("/documents/attestation_de_suivie_cybersecurite.pdf")}>
-            <div className="text-4xl font-bold text-[#B2174A] mb-2">1</div>
-            <div className="text-gray-600">Cyber Sécurité</div>
+            <div className="text-4xl font-bold text-[#B2174A] mb-2 group-hover:scale-110 transition">1</div>
+            <div className="text-gray-600 font-medium">CNIL RGPD</div>
+            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir l'attestation</p>
           </div>
-          <div className="text-center cursor-pointer p-4 hover:bg-gray-50 rounded-xl transition"
+          <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30" 
+               onClick={() => setSelectedPdf("/documents/attestation_de_suivie_cybersecurite.pdf")}>
+            <div className="text-4xl font-bold text-[#B2174A] mb-2 group-hover:scale-110 transition">1</div>
+            <div className="text-gray-600 font-medium">Cyber Sécurité</div>
+            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir l'attestation</p>
+          </div>
+          <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30"
                onClick={() => setSelectedPdf("/documents/rapport_de_stage_1.pdf")}>
-            <div className="text-4xl font-bold text-[#7D527A] mb-2">2</div>
-            <div className="text-gray-600">Rapports de Stage</div>
+            <div className="text-4xl font-bold text-[#7D527A] mb-2 group-hover:scale-110 transition">2</div>
+            <div className="text-gray-600 font-medium">Rapports de Stage</div>
+            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir le dernier rapport</p>
           </div>
-          <div className="text-center cursor-pointer p-4 hover:bg-gray-50 rounded-xl transition"
+          <div className="text-center cursor-pointer p-6 hover:bg-gray-50 rounded-xl transition group shadow-sm border border-transparent hover:border-[#DFA49A]/30"
                onClick={() => setSelectedPdf("/documents/fiche5.pdf")}>
-            <div className="text-4xl font-bold text-[#C98A8A] mb-2">1</div>
-            <div className="text-gray-600">Compétences E5</div>
+            <div className="text-4xl font-bold text-[#C98A8A] mb-2 group-hover:scale-110 transition">1</div>
+            <div className="text-gray-600 font-medium">Compétences E5</div>
+            <p className="text-xs text-gray-400 mt-1">Cliquez pour voir la fiche</p>
           </div>
         </div>
       </section>
 
+      {/* Filtres */}
+      <section className="py-8 bg-white border-b border-[#DFA49A]/20">
+        <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-4">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+              className={`px-4 py-2 rounded-full flex items-center transition ${
+                activeCategory === cat.key ? 'bg-[#B2174A] text-white' : 'bg-[#DFA49A]/20 text-[#421734] hover:bg-[#DFA49A]/40'
+              }`}
+            >
+              <i className={`${cat.icon} mr-2`}></i> {cat.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* Grille des certifications */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCertifications.map((cert) => (
-              <div key={cert.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-[#DFA49A]/20 hover:shadow-2xl transition">
-                <img src={cert.image} alt={cert.title} className="w-full h-48 object-cover" />
+              <div key={cert.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-[#DFA49A]/20 hover:shadow-2xl transition group">
+                <div className="relative h-48 overflow-hidden">
+                  <img src={cert.image} alt={cert.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                  <div className="absolute top-4 right-4 bg-[#B2174A] text-white px-3 py-1 rounded-full text-xs">{cert.date}</div>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#421734] mb-2">{cert.title}</h3>
+                  <h3 className="text-lg font-bold text-[#421734] mb-2">{cert.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{cert.description}</p>
                   <div className="flex items-center justify-between mt-4">
                     <button 
                       onClick={() => setSelectedPdf(cert.pdfLink)}
