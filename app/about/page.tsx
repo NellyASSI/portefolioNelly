@@ -1,11 +1,5 @@
 'use client';
 import Link from 'next/link';
-export const metadata = {
-  title: "Nelly Portfolio",
-  icons: {
-    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
-  },
-};
 
 export default function AboutPage() {
   const skills = [

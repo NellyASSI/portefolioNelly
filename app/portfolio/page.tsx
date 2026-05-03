@@ -1,12 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-export const metadata = {
-  title: "Nelly Portfolio",
-  icons: {
-    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
-  },
-};
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('tous');
@@ -29,7 +23,14 @@ export default function PortfolioPage() {
       title: "Blog sur la Réalité Virtuelle",
       category: "web",
       description: "Site web informatif explorant les différences entre la réalité virtuelle et la réalité augmentée",
-      fullDescription: "Ce projet consiste en la conception et le développement d'un site web informatif dédié à la réalité virtuelle (VR) et à la réalité augmentée (AR). L'objectif principal était de vulgariser ces technologies en expliquant leurs différences, leurs usages ainsi que leurs impacts dans des domaines variés comme les jeux vidéo, la médecine ou encore l'éducation.\n\nDans ce cadre, j'ai développé une interface moderne, responsive et structurée, permettant une navigation fluide sur tous les types d'écrans (ordinateur, tablette et mobile). Le site est organisé en plusieurs sections thématiques avec une hiérarchisation claire des contenus afin de faciliter la compréhension pour l'utilisateur.\n\nJ'ai particulièrement travaillé sur une section dédiée aux enjeux de la réalité virtuelle, dans laquelle j'aborde :\n\n- les défis techniques (latence, qualité graphique, immersion, accessibilité),\n- les enjeux sécuritaires (protection des données, cybersécurité, sécurité physique),\n- ainsi que les problématiques éthiques (addiction, manipulation, impact social).\n\nCette partie du projet m'a permis de structurer des contenus complexes et de les rendre accessibles à un public large.\n\nJ'ai également intégré des interactions dynamiques en JavaScript afin d'améliorer l'expérience utilisateur, notamment à travers des boutons interactifs, une navigation fluide et des éléments de contenu conditionnels. Une section participative a aussi été mise en place pour encourager l'utilisateur à donner son avis et interagir avec le site.",
+      fullDescription: "J'ai réalisé toute la partie Enjeux et défis du site sur la réalité virtuelle et la réalité augmentée. Mon objectif était de transformer un sujet technique en contenu compréhensible pour un public non spécialiste, tout en gardant une présentation claire et structurée.",
+      context: "Projet académique de site informatif autour de la réalité virtuelle et de la réalité augmentée.",
+      objective: "Présenter les différences entre VR et AR, leurs usages et leurs impacts dans des domaines comme les jeux vidéo, la santé et l'éducation.",
+      contribution: "J'ai réalisé la partie Enjeux et défis : recherche d'informations, organisation des idées, rédaction des contenus et intégration dans l'interface.",
+      difficulties: "La principale difficulté était de rendre des notions techniques accessibles sans perdre les informations importantes.",
+      results: "Le site présente une section claire sur les défis techniques, sécuritaires et éthiques de la VR, avec une navigation lisible.",
+      proofs: ["Contenus rédigés", "Captures du site", "Structure des sections", "Code HTML/CSS/JS"],
+      e5Skills: ["Développer la présence en ligne", "Organiser son développement professionnel", "Travailler en mode projet"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/2e49970dddcfd7605b36fe176a65266a.png",
       tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
       github: "https://github.com/Christian-Tasseu/Volet_Auto.git",
@@ -39,7 +40,14 @@ export default function PortfolioPage() {
       title: "Système de Gestion des Utilisateurs (SGU)",
       category: "web",
       description: "Système complet de gestion des utilisateurs avec interface d'administration et génération de rapports PDF",
-      fullDescription: "Ce projet consiste en la conception et le développement d'une application web complète de gestion des utilisateurs, intégrant un système d'authentification sécurisé et une gestion des rôles (administrateur et utilisateur).\n\nL'objectif principal était de mettre en place une solution permettant de gérer efficacement les comptes utilisateurs à travers une interface d'administration intuitive, tout en respectant les bonnes pratiques de sécurité.\n\nJ'ai développé l'ensemble de la logique backend en PHP, en m'appuyant sur une base de données MySQL pour le stockage des informations. L'application permet une gestion complète des utilisateurs (CRUD), incluant l'ajout, la modification, la suppression et la consultation des comptes via un espace administrateur dédié.\n\nLe projet repose sur une architecture organisée inspirée du modèle MVC, avec une séparation claire entre :\n\n- les modèles (gestion des données),\n- les contrôleurs (logique métier),\n- et les vues (interface utilisateur).\n\nJ'ai également mis en place un système d'authentification complet avec gestion des sessions, permettant de restreindre l'accès aux صفحات selon le rôle de l'utilisateur. Des middlewares ont été utilisés pour sécuriser les routes sensibles.\n\nUne attention particulière a été portée à la sécurité :\n\n- utilisation de requêtes préparées avec PDO pour éviter les injections SQL,\n- hachage des mots de passe avec password_hash() et vérification avec password_verify(),\n- validation et nettoyage des données utilisateurs (htmlspecialchars, filter_var),\n- contrôle d'accès basé sur les rôles.\n\nL'application propose également :\n\n- un tableau de bord dynamique selon le rôle,\n- une interface d'administration pour la gestion des utilisateurs,\n- ainsi qu'un système de génération de rapports au format PDF pour l'export des données.\n\nEn complément, j'ai rédigé une documentation technique et utilisateur, décrivant l'architecture du projet, la structure des fichiers, ainsi que les étapes d'utilisation de l'application (connexion, gestion des utilisateurs, navigation).\n\nCe projet m'a permis de renforcer mes compétences en développement backend, en gestion de base de données, en structuration d'application web et en sécurisation des systèmes.",
+      fullDescription: "J'ai géré la documentation du projet et le CRUD complet de gestion des utilisateurs. Ce projet m'a permis de montrer ma capacité à organiser une application, sécuriser les données et expliquer le fonctionnement technique de manière claire.",
+      context: "Application web de gestion des comptes utilisateurs avec espace d'administration, authentification et rôles.",
+      objective: "Permettre à un administrateur d'ajouter, consulter, modifier et supprimer des utilisateurs depuis une interface dédiée.",
+      contribution: "J'ai pris en charge la documentation technique et utilisateur, ainsi que le CRUD complet : création, lecture, modification et suppression des comptes.",
+      difficulties: "Il fallait garder une logique claire entre les vues, les traitements PHP et la base MySQL, tout en sécurisant les formulaires.",
+      results: "L'application permet une gestion structurée des utilisateurs, avec authentification, contrôle des rôles et export de données.",
+      proofs: ["Documentation technique", "Documentation utilisateur", "CRUD utilisateurs", "Base de données MySQL", "Code PHP/PDO"],
+      e5Skills: ["Gérer le patrimoine informatique", "Mettre à disposition un service", "Répondre aux incidents et demandes"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/06a387c69a9d7d895fe5e43331967ccf.png",
       tags: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "PHP", "PDF"],
       github: "https://github.com/Enami-code770/sgu1.0.git",
@@ -49,7 +57,14 @@ export default function PortfolioPage() {
       title: "GameHub - Catalogue de Jeux Vidéo",
       category: "application",
       description: "Application web permettant aux utilisateurs de découvrir des jeux vidéo et de les ajouter à leurs favoris",
-      fullDescription: "GameHub est une application web dynamique permettant aux utilisateurs de découvrir des jeux vidéo et de gérer une liste personnalisée de favoris. Ce projet a été entièrement réalisé en autonomie, de la conception à l'implémentation.\n\nL'objectif était de développer une plateforme interactive reposant sur une base de données, capable d'afficher dynamiquement des contenus et de gérer les interactions utilisateurs.\n\nJ'ai conçu et structuré une base de données MySQL comprenant plusieurs entités, notamment les utilisateurs, les jeux et les favoris. Un schéma de conception (diagramme Entité-Relation) a été réalisé en amont afin d'organiser les relations entre les données.\n\nLe backend a été développé en PHP, avec une gestion complète :\n\n- de l'authentification (inscription, connexion, déconnexion),\n- du traitement des formulaires,\n- et de la communication avec la base de données.\n\nL'application permet :\n\n- d'afficher dynamiquement une liste de jeux depuis la base de données,\n- d'ajouter ou retirer des jeux des favoris,\n- d'accéder à une page personnalisée contenant les jeux favoris de l'utilisateur.\n\nLe frontend a été conçu avec HTML, CSS et Bootstrap pour garantir une interface responsive et intuitive. JavaScript a été utilisé pour améliorer l'interactivité côté client.\n\nLe projet est organisé de manière structurée avec :\n\n- un dossier assets/ contenant les ressources (CSS, JavaScript, images, vidéos),\n- des fichiers de configuration (config.php, db.php) pour la connexion à la base de données,\n- des scripts dédiés au traitement des actions utilisateurs (inscription, connexion),\n- et plusieurs pages dynamiques (accueil, favoris, authentification).\n\nCe projet m'a permis de développer des compétences solides en :\n\n- gestion de base de données relationnelle,\n- développement backend en PHP,\n- structuration d'une application web,\n- et gestion des interactions utilisateur.",
+      fullDescription: "J'ai réalisé GameHub de A à Z, depuis la conception de la base de données jusqu'au développement des pages et des fonctionnalités. C'est l'un des projets qui montre le plus clairement mon autonomie technique.",
+      context: "Projet personnel/formation autour d'un catalogue de jeux vidéo avec gestion de favoris.",
+      objective: "Créer une application dynamique où un utilisateur peut consulter des jeux, se connecter et gérer sa liste de favoris.",
+      contribution: "J'ai tout réalisé : conception, base de données MySQL, pages PHP, authentification, affichage dynamique, gestion des favoris et intégration responsive.",
+      difficulties: "La difficulté principale était de relier correctement les utilisateurs, les jeux et les favoris, puis de garder une navigation simple.",
+      results: "L'application dispose d'une base relationnelle, d'un système d'inscription/connexion et d'une gestion personnalisée des favoris.",
+      proofs: ["Schéma de base de données", "Code PHP", "Pages dynamiques", "Fonction favoris", "Lien GitHub"],
+      e5Skills: ["Mettre à disposition un service", "Gérer le patrimoine informatique", "Organiser son développement professionnel"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/9f20041a492c8ca60147ddda9299c90c.png",
       tags: ["PHP", "JavaScript", "CSS", "Bootstrap", "MySQL Workbench"],
       github: "https://github.com/Enami-code770/GameHub.git", 
@@ -59,7 +74,14 @@ export default function PortfolioPage() {
       title: "Volet Automatique Intelligent",
       category: "web",
       description: "Interface interactive avec un volet automation qui s'ouvre ou se ferme automatiquement en fonction de l'intensité lumineuse",
-      fullDescription: "Ce projet consiste en la simulation d'un système de volet automatique intelligent capable de s'ouvrir ou de se fermer en fonction de l'intensité lumineuse. Il a été réalisé en groupe, avec une participation centrée sur le développement du front-end.\n\nJ'ai contribué à la conception et à l'intégration de l'interface utilisateur en HTML et CSS, en veillant à proposer une représentation visuelle claire et interactive du fonctionnement du volet. L'objectif était de permettre à l'utilisateur de comprendre facilement le comportement du système à travers une simulation graphique.\n\nLa logique du projet repose sur JavaScript, où j'ai participé à la mise en place de conditions permettant de déclencher automatiquement l'ouverture ou la fermeture du volet en fonction d'un seuil de luminosité. Le système réagit en temps réel aux interactions de l'utilisateur, simulant ainsi un environnement intelligent.\n\nCe projet m'a permis de renforcer mes compétences en :\n\n- manipulation du DOM,\n- gestion des événements en JavaScript,\n- logique conditionnelle,\n- et développement d'interfaces interactives.\n\nIl m'a également permis de travailler en équipe, en répartissant les tâches et en coordonnant l'intégration des différentes parties du projet.",
+      fullDescription: "J'ai participé à la création d'une interface interactive simulant un volet automatique. Le projet montre ma capacité à manipuler le DOM et à traduire une règle simple en comportement visible pour l'utilisateur.",
+      context: "Projet de simulation d'un système domotique réagissant à l'intensité lumineuse.",
+      objective: "Afficher le comportement d'un volet qui s'ouvre ou se ferme automatiquement selon un seuil de luminosité.",
+      contribution: "J'ai participé à l'intégration HTML/CSS et à la logique JavaScript permettant de déclencher l'ouverture ou la fermeture du volet.",
+      difficulties: "Il fallait rendre la simulation compréhensible visuellement et synchroniser l'état du volet avec la valeur lumineuse.",
+      results: "L'utilisateur peut comprendre le fonctionnement du système grâce à une interface simple et à une réaction immédiate.",
+      proofs: ["Interface interactive", "Gestion du DOM", "Conditions JavaScript", "Lien GitHub"],
+      e5Skills: ["Travailler en mode projet", "Mettre à disposition un service", "Répondre aux incidents et demandes"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/fc11c3429732ea36dfa4e8312addc36c.png",
       tags: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/Christian-Tasseu/Volet_Auto.git",
@@ -69,7 +91,14 @@ export default function PortfolioPage() {
       title: "Application de Demande de Devis Plomberie",
       category: "web",
       description: "Application web pour demander des devis de services de dépannage en plomberie avec formulaire interactif",
-      fullDescription: "Ce projet a été réalisé dans le cadre de mon stage et consiste en le développement d'une fonctionnalité de demande de devis pour un site web de services de dépannage en plomberie.\n\nJ'ai été en charge de la conception et du développement de la partie contact, permettant aux utilisateurs d'envoyer des demandes de devis via un formulaire interactif. L'objectif était de faciliter la prise de contact entre les clients et l'entreprise, tout en garantissant la fiabilité des données transmises.\n\nJ'ai conçu une interface claire et responsive en HTML, CSS et Bootstrap, intégrant plusieurs champs (nom, prénom, email, sujet, message). Des validations côté client ont été mises en place en JavaScript afin d'améliorer l'expérience utilisateur et de limiter les erreurs de saisie.\n\nCôté backend, j'ai développé le traitement du formulaire en PHP avec connexion à une base de données MySQL via PDO. Les données sont sécurisées et nettoyées (htmlspecialchars) avant d'être insérées dans la base de données à l'aide de requêtes préparées, afin de prévenir les injections SQL.\n\nLes messages envoyés par les utilisateurs sont enregistrés dans une table dédiée, permettant leur consultation ultérieure par l'entreprise.\n\nCe projet m'a permis de mettre en pratique :\n\n- la gestion complète d'un formulaire (front-end + back-end),\n- la connexion et manipulation d'une base de données,\n- la sécurisation des données utilisateurs,\n- et le développement dans un contexte professionnel réel.",
+      fullDescription: "J'ai développé une fonctionnalité de demande de devis dans un contexte de stage. Ce projet montre un cas concret de service mis à disposition pour répondre à un besoin client.",
+      context: "Projet de stage pour un site de services de dépannage en plomberie.",
+      objective: "Permettre aux visiteurs d'envoyer une demande de devis via un formulaire clair et fiable.",
+      contribution: "J'ai conçu le formulaire, intégré l'interface responsive, ajouté des validations JavaScript et prévu l'enregistrement sécurisé des demandes.",
+      difficulties: "Le point important était de limiter les erreurs de saisie et de sécuriser les données envoyées par les utilisateurs.",
+      results: "Le formulaire facilite la prise de contact et permet à l'entreprise de récupérer les demandes de manière structurée.",
+      proofs: ["Formulaire de contact", "Validation JavaScript", "Traitement PHP", "Base MySQL", "Rapport de stage"],
+      e5Skills: ["Développer la présence en ligne", "Mettre à disposition un service", "Répondre aux incidents et demandes"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/8f4ea06d26efd94b875bfa0b9cbac464.png",
       tags: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
       github: "#",
@@ -79,7 +108,14 @@ export default function PortfolioPage() {
       title: "Intranet d'Entreprise CoreFlow",
       category: "application",
       description: "Plateforme intranet complète en cours de développement pour la gestion des congés, tickets et événements d'entreprise",
-      fullDescription: "CoreFlow est une plateforme intranet d'entreprise développée dans le cadre du BTS SIO (épreuve E5), visant à centraliser la gestion des ressources humaines et améliorer la communication interne au sein d'une organisation.\n\nCe projet, réalisé en équipe (10 personnes avec un travail en binôme), consiste à concevoir une application web moderne reposant sur une architecture complète front-end / back-end.\n\nL'application permet aux utilisateurs de :\n\n- gérer leurs demandes de congés,\n- créer et participer à des événements internes (réunions, formations, ateliers),\n- ouvrir et suivre des tickets de support,\n- accéder à des documents selon leur rôle.\n\nLe système intègre une authentification sécurisée ainsi qu'une gestion avancée des rôles (Administrateur, Manager, RH, Employé), permettant de définir des droits d'accès précis et adaptés à chaque utilisateur.\n\n**Missions réalisées**\n\nDans ce projet, j'ai été spécifiquement en charge, en binôme, de la gestion des événements, aussi bien côté backend que frontend.\n\n**Backend (Node.js) :**\n\n- Développement d'API REST pour la gestion des événements :\n  - suppression d'événements (DELETE)\n  - récupération des événements passés (GET)\n  - récupération des événements à venir (GET)\n- Mise en place de routes sécurisées avec gestion des rôles utilisateurs\n- Participation à la structuration du code (controllers, routes, models, middlewares)\n\n**Frontend (Vue.js) :**\n\n- Développement des interfaces d'affichage des événements\n- Création de pages dynamiques permettant de :\n  - afficher les événements passés et à venir\n  - adapter l'affichage selon le rôle de l'utilisateur\n- Intégration avec les API backend pour un affichage en temps réel\n\n**Fonctionnalités développées (gestion des événements)**\n- Création d'événements (Admin, Manager)\n- Modification et suppression avec gestion des droits\n- Consultation des événements selon le rôle\n- Filtrage des événements (passés / à venir)\n- Gestion des participants (invitation par email ou par département)\n\n**Architecture du projet**\n\nLe projet est structuré de manière professionnelle avec :\n\n- un backend Node.js organisé en controllers, routes, models et middlewares\n- un frontend Vue.js basé sur des composants, vues et un système de routing\n- une base de données (MySQL) pour la gestion des utilisateurs et des données métier\n- une documentation technique (installation, API, organisation du projet)\n\n**Apports et compétences développées**\n\nCe projet m'a permis de :\n\n- travailler sur une architecture web complète (full-stack),\n- comprendre le fonctionnement des API REST,\n- manipuler Vue.js pour créer des interfaces dynamiques,\n- collaborer en équipe avec une organisation structurée (répartition des tâches, Git),\n- gérer des problématiques réelles de droits d'accès et de logique métier.",
+      fullDescription: "J'ai travaillé avec mon collègue sur la partie événements de CoreFlow. J'ai participé à la suppression des événements, à leur affichage selon la date et à leur remontée dans le tableau de bord.",
+      context: "Projet BTS SIO en équipe : intranet d'entreprise pour centraliser la communication interne et certaines fonctions RH.",
+      objective: "Permettre aux utilisateurs de consulter les événements internes, distinguer les événements passés et à venir, et afficher les informations utiles sur le tableau de bord.",
+      contribution: "Avec mon collègue, j'ai géré la partie événements : suppression, récupération selon la date, affichage dans les vues et intégration sur le tableau de bord.",
+      difficulties: "La difficulté était de coordonner le front Vue.js avec les API Node.js, puis de respecter les rôles et les dates des événements.",
+      results: "La partie événements permet de consulter les événements selon leur statut temporel et d'avoir une vue utile depuis le tableau de bord.",
+      proofs: ["Routes API événements", "Composants Vue.js", "Tableau de bord", "Gestion des dates", "Travail Git en équipe"],
+      e5Skills: ["Travailler en mode projet", "Mettre à disposition un service", "Gérer le patrimoine informatique", "Répondre aux incidents et demandes"],
       image: "https://static.readdy.ai/image/e0dcaa9f25ed50b50ba4099ea72e4385/838ae924a13129e2b2a40ca15a8e9295.png",
       tags: ["Vue.js", "Node.js", "JavaScript"],
       github: "https://github.com/2026-BTS-SIO2-ESIC/CoreFlow.git",
@@ -315,9 +351,43 @@ export default function PortfolioPage() {
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">Mes Projets</h1>
             <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed mb-8">
-              Découvrez mes projets de développement web, applications et ma veille technologique. 
-              Chaque projet reflète ma passion pour les technologies modernes et mon apprentissage continu.
+              Découvrez mes réalisations présentées pour l'épreuve E5 : contexte, contribution personnelle,
+              preuves concrètes et compétences mobilisées.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* E5 Summary Section */}
+      <section className="py-12 bg-[#2A2224] border-b border-[#5A1F2E]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1.2fr_2fr] gap-8 items-start">
+            <div>
+              <span className="inline-flex items-center gap-2 bg-[#DFA49A]/15 text-[#DFA49A] px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <i className="ri-file-list-3-line"></i>
+                Préparation E5
+              </span>
+              <h2 className="text-3xl font-bold text-white mb-4">Lien avec ma fiche de compétences</h2>
+              <p className="text-[#DFA49A] leading-relaxed">
+                Chaque projet est relié aux compétences du bloc E5 afin que le jury puisse comprendre ce que j'ai fait,
+                comment je l'ai fait et quelles preuves je peux présenter.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Gérer le patrimoine informatique",
+                "Répondre aux incidents et demandes",
+                "Développer la présence en ligne",
+                "Travailler en mode projet",
+                "Mettre à disposition un service",
+                "Organiser son développement professionnel"
+              ].map((skill, index) => (
+                <div key={index} className="bg-[#421734] border border-[#5A1F2E] rounded-xl p-4 text-[#DFA49A] font-medium">
+                  <i className="ri-checkbox-circle-line text-[#C8514D] mr-2"></i>
+                  {skill}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -359,6 +429,10 @@ export default function PortfolioPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#421734] mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                  <div className="bg-[#DFA49A]/15 border border-[#DFA49A]/30 rounded-lg p-3 mb-4">
+                    <p className="text-xs uppercase tracking-wider text-[#B2174A] font-bold mb-1">Ma contribution</p>
+                    <p className="text-sm text-[#421734] leading-relaxed">{project.contribution}</p>
+                  </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <span
@@ -369,20 +443,34 @@ export default function PortfolioPage() {
                       </span>
                     ))}
                   </div>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.e5Skills.slice(0, 2).map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="bg-[#421734] text-[#DFA49A] px-3 py-1 rounded-full text-xs font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                   <div className="flex space-x-4">
-                    <a
-                      href={project.github}
-                      className="flex items-center text-gray-600 hover:text-[#421734] font-medium transition-colors cursor-pointer"
-                    >
-                      <i className="ri-github-line mr-2 w-4 h-4 flex items-center justify-center"></i>
-                      Code
-                    </a>
+                    {project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-600 hover:text-[#421734] font-medium transition-colors cursor-pointer"
+                      >
+                        <i className="ri-github-line mr-2 w-4 h-4 flex items-center justify-center"></i>
+                        Code
+                      </a>
+                    )}
                     <button
                       onClick={() => handleDemoClick(project)}
                       className="flex items-center text-[#B2174A] hover:text-[#C8514D] font-medium transition-colors cursor-pointer"
                     >
-                      <i className="ri-external-link-line mr-2 w-4 h-4 flex items-center justify-center"></i>
-                      Démo
+                      <i className="ri-file-search-line mr-2 w-4 h-4 flex items-center justify-center"></i>
+                      Détails E5
                     </button>
                   </div>
                 </div>
@@ -403,6 +491,39 @@ export default function PortfolioPage() {
             <p className="text-xl text-[#DFA49A] max-w-4xl mx-auto leading-relaxed">
               Low-Code & No-Code : l'avenir du développement d'apps
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-[#2A2224] border border-[#5A1F2E] rounded-2xl p-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#B2174A] to-[#C8514D] rounded-xl flex items-center justify-center mb-4">
+                <i className="ri-search-eye-line text-white text-xl"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Méthode de veille</h3>
+              <p className="text-[#DFA49A] text-sm leading-relaxed">
+                Je suis l'évolution du low-code/no-code à partir de sources professionnelles, de vidéos spécialisées
+                et de comparatifs d'outils afin de comprendre les usages réels en entreprise.
+              </p>
+            </div>
+            <div className="bg-[#2A2224] border border-[#5A1F2E] rounded-2xl p-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#C8514D] to-[#DFA49A] rounded-xl flex items-center justify-center mb-4">
+                <i className="ri-filter-3-line text-white text-xl"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Critères observés</h3>
+              <p className="text-[#DFA49A] text-sm leading-relaxed">
+                Je compare la rapidité de développement, la sécurité, la maintenance, les possibilités d'intégration
+                et les limites lorsque le projet devient plus complexe.
+              </p>
+            </div>
+            <div className="bg-[#2A2224] border border-[#5A1F2E] rounded-2xl p-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#7D527A] to-[#5A3D63] rounded-xl flex items-center justify-center mb-4">
+                <i className="ri-graduation-cap-line text-white text-xl"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Lien avec mon parcours</h3>
+              <p className="text-[#DFA49A] text-sm leading-relaxed">
+                Cette veille m'aide à mieux comprendre les outils actuels, mais aussi à garder un regard critique :
+                certaines solutions accélèrent un projet, mais ne remplacent pas les bases du développement web.
+              </p>
+            </div>
           </div>
           
           {/* Main Content Grid */}
@@ -451,6 +572,10 @@ export default function PortfolioPage() {
                 <li className="flex items-start group/item">
                   <span className="text-[#C8514D] mr-3 font-bold text-lg"></span>
                   <span className="text-[#DFA49A] text-sm leading-relaxed">Solutions <strong>orientées entreprise</strong></span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#C8514D] mr-3 font-bold text-lg"></span>
+                  <span className="text-[#DFA49A] text-sm leading-relaxed">Automatisation des processus et connexion aux API</span>
                 </li>
               </ul>
             </div>
@@ -507,6 +632,10 @@ export default function PortfolioPage() {
                 <li className="flex items-start group/item">
                   <span className="text-[#DFA49A] mr-2">⚠️</span>
                   <span className="text-[#DFA49A] text-sm">Limites techniques</span>
+                </li>
+                <li className="flex items-start group/item">
+                  <span className="text-[#DFA49A] mr-2">⚠️</span>
+                  <span className="text-[#DFA49A] text-sm">Dépendance aux plateformes</span>
                 </li>
               </ul>
             </div>
@@ -698,49 +827,74 @@ export default function PortfolioPage() {
       </div>
 
       <div className="p-8 md:p-16">
-        {/* Section 1 : Analyse & Description */}
-        <div className="mb-20">
+        {/* Section 1 : Analyse E5 */}
+        <div className="mb-16">
           <div className="flex items-center gap-6 mb-10">
-            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Analyse du Projet</h3>
+            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Analyse E5 du projet</h3>
             <div className="h-[1px] bg-[#DFA49A]/40 flex-grow"></div>
           </div>
           
-          <div className="columns-1 md:columns-2 gap-12 text-gray-700 leading-relaxed text-lg whitespace-pre-line prose">
-            <p className="first-letter:text-6xl first-letter:font-bold first-letter:text-[#B2174A] first-letter:mr-3 first-letter:float-left">
-              {selectedProject.fullDescription}
-            </p>
+          <p className="text-gray-700 leading-relaxed text-lg mb-10 max-w-4xl">
+            {selectedProject.fullDescription}
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { title: "Contexte", value: selectedProject.context, icon: "ri-map-pin-line" },
+              { title: "Objectif", value: selectedProject.objective, icon: "ri-focus-3-line" },
+              { title: "Travail réalisé par moi", value: selectedProject.contribution, icon: "ri-user-star-line" },
+              { title: "Difficultés rencontrées", value: selectedProject.difficulties, icon: "ri-tools-line" },
+              { title: "Résultats obtenus", value: selectedProject.results, icon: "ri-checkbox-circle-line" },
+            ].map((item, index) => (
+              <div key={index} className="bg-[#fdfafb] border border-[#DFA49A]/30 rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#421734] text-[#DFA49A] flex items-center justify-center">
+                    <i className={`${item.icon} text-xl`}></i>
+                  </div>
+                  <h4 className="text-lg font-bold text-[#421734]">{item.title}</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">{item.value}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Section 2 : Galerie de Démo (Les 4 Captures) */}
+        {/* Section 2 : Preuves et compétences */}
         <div className="space-y-12">
           <div className="flex items-center gap-6 mb-10">
-            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Aperçus & Captures</h3>
+            <h3 className="text-3xl font-bold text-[#421734] whitespace-nowrap tracking-tight">Preuves et compétences</h3>
             <div className="h-[1px] bg-[#DFA49A]/40 flex-grow"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {[
-              { label: "Interface de navigation", key: "screenshot1" },
-              { label: "Logique métier & Data", key: "screenshot2" },
-              { label: "Vue détaillée", key: "screenshot3" },
-              { label: "Back-office / Administration", key: "screenshot4" }
-            ].map((capture, idx) => (
-              <div key={idx} className="group flex flex-col gap-4">
-                <div className="relative rounded-2xl overflow-hidden border border-[#DFA49A]/20 bg-[#fdfafb] shadow-xl transition-all duration-500 hover:shadow-2xl">
-                  <img 
-                    src={selectedProject[capture.key as keyof typeof selectedProject] || "https://via.placeholder.com/800x450?text=Aperçu+Projet"} 
-                    alt={capture.label}
-                    className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-[#421734]/0 group-hover:bg-[#421734]/5 transition-colors duration-500"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="w-8 h-[1px] bg-[#B2174A]"></span>
-                  <span className="text-[#421734] font-bold text-sm tracking-widest uppercase">{capture.label}</span>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-[#421734] rounded-2xl p-8">
+              <h4 className="text-xl font-bold text-white mb-5 flex items-center gap-2">
+                <i className="ri-attachment-2"></i>
+                Preuves concrètes à présenter
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {selectedProject.proofs.map((proof: string, idx: number) => (
+                  <span key={idx} className="bg-[#DFA49A]/15 text-[#DFA49A] border border-[#DFA49A]/30 px-4 py-2 rounded-full text-sm font-medium">
+                    {proof}
+                  </span>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="bg-[#fdfafb] border border-[#DFA49A]/30 rounded-2xl p-8">
+              <h4 className="text-xl font-bold text-[#421734] mb-5 flex items-center gap-2">
+                <i className="ri-medal-line text-[#B2174A]"></i>
+                Compétences E5 mobilisées
+              </h4>
+              <div className="space-y-3">
+                {selectedProject.e5Skills.map((skill: string, idx: number) => (
+                  <div key={idx} className="flex items-start gap-3 text-gray-700">
+                    <i className="ri-checkbox-circle-line text-[#B2174A] mt-1"></i>
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

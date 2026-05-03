@@ -22,6 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nelly Portfolio - Étudiante BTS SIO SLAM",
   description: "Portfolio de ASSI Abo Marie Ange Nelly, étudiante en BTS SIO option SLAM passionnée de développement web",
+  icons: {
+    icon: [{ url: "/images/image.png", type: "image/png" }],
+    shortcut: "/images/image.png",
+    apple: "/images/image.png",
+  },
 };
 
 export default function RootLayout({
