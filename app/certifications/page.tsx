@@ -2,6 +2,13 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+export const metadata = {
+  title: "Nelly Portfolio",
+  icons: {
+    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
+  },
+};
+
 export default function CertificationsPage() {
   const [activeCategory, setActiveCategory] = useState('tous');
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
@@ -29,7 +36,7 @@ export default function CertificationsPage() {
       id: 5,
       category: 'stage',
       title: 'Rapport de Stage - Développement Web',
-      description: 'Stage de développement web chez une entreprise technologique',
+      description: 'Rapport du 1er stage pour l\'entreprise FenziConnect',
       date: '2025',
       image: '/images/rapport1.jpeg',
       pdfLink: '/documents/rapport_de_stage_1.pdf'
@@ -38,7 +45,7 @@ export default function CertificationsPage() {
       id: 6,
       category: 'stage',
       title: 'Rapport de Stage - Gestion de Projet',
-      description: 'Expérience en gestion de projet informatique et méthodologies agiles',
+      description: 'Rapport du 2ème stage axé sur le développement du site web de l\'entreprise FenziConnect ',
       date: '2026',
       image: '/images/rapport2.jpeg',
       pdfLink: '/documents/rapport_de_stage_2.pdf'
@@ -47,7 +54,7 @@ export default function CertificationsPage() {
       id: 7,
       category: 'fiche',
       title: 'Fiche de compétence E5 - BTS SIO',
-      description: 'Alternance en développement logiciel et applications métiers',
+      description: 'Fiche de compétences pour l\'épreuve E5 du BTS SIO, couvrant les compétences techniques et professionnelles acquises au cours de la formation',
       date: '2026',
       image: '/images/e5.jpeg',
       pdfLink: '/documents/fiche5.pdf'

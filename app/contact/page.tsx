@@ -1,6 +1,12 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+export const metadata = {
+  title: "Nelly Portfolio",
+  icons: {
+    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
+  },
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -183,160 +189,160 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-[#421734]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Envoyez-moi un message</h2>
-              <p className="text-lg text-[#DFA49A] mb-8">
-                Que ce soit pour un projet, une collaboration ou simplement pour échanger, 
-                je serais ravie de vous entendre !
-              </p>
-              
-              <form id="contact-portfolio" data-readdy-form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="nom" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                      Nom complet *
-                    </label>
-                    <input
-                      type="text"
-                      id="nom"
-                      name="nom"
-                      required
-                      value={formData.nom}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                      placeholder="Votre nom complet"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                      placeholder="votre.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="telephone" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="telephone"
-                      value={formData.telephone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                      placeholder="+33 X XX XX XX XX"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="sujet" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                    Sujet *
-                  </label>
-                  <input
-                    type="text"
-                    id="sujet"
-                    name="sujet"
-                    required
-                    value={formData.sujet}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
-                    placeholder="Résumé de votre demande"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[#DFA49A] mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    maxLength={500}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent resize-none text-sm"
-                    placeholder="Décrivez votre projet ou votre demande en détail..."
-                  ></textarea>
-                  <div className="text-right text-sm text-[#DFA49A]/70 mt-1">
-                    {formData.message.length}/500 caractères
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#B2174A] text-white py-3 px-6 rounded-lg hover:bg-[#C8514D] transition-colors font-medium whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
-                </button>
-
-                {submitStatus && (
-                  <div className={`text-center p-4 rounded-lg ${submitStatus.includes('succès') ? 'bg-[#C8514D]/20 text-[#DFA49A]' : 'bg-red-900/20 text-red-300'}`}>
-                    {submitStatus}
-                  </div>
-                )}
-              </form>
+   {/* 
+  <section className="py-20 bg-[#421734]">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid lg:grid-cols-2 gap-16 items-start">
+        
+        <div>
+          <h2 className="text-3xl font-bold text-white mb-6">Envoyez-moi un message</h2>
+          <p className="text-lg text-[#DFA49A] mb-8">
+            Que ce soit pour un projet, une collaboration ou simplement pour échanger, 
+            je serais ravie de vous entendre !
+          </p>
+          
+          <form id="contact-portfolio" data-readdy-form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="nom" className="block text-sm font-medium text-[#DFA49A] mb-2">
+                  Nom complet *
+                </label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  required
+                  value={formData.nom}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
+                  placeholder="Votre nom complet"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-[#DFA49A] mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
+                  placeholder="votre.email@example.com"
+                />
+              </div>
             </div>
 
-            {/* Services & Additional Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Comment puis-je vous aider ?</h2>
-              
-              <div className="space-y-6 mb-12">
-                {services.map((service, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-[#B2174A] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <i className={`${service.icon} text-white text-xl`}></i>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-                      <p className="text-[#DFA49A]">{service.description}</p>
-                    </div>
-                  </div>
-                ))}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="telephone" className="block text-sm font-medium text-[#DFA49A] mb-2">
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  value={formData.telephone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
+                  placeholder="+33 X XX XX XX XX"
+                />
               </div>
+            </div>
 
-              {/* FAQ */}
-              <div className="bg-[#2A2224] p-6 rounded-xl border border-[#5A1F2E]">
-                <h3 className="text-xl font-bold text-white mb-4">Questions fréquentes</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-[#DFA49A] mb-1">Quel est votre délai de réponse ?</h4>
-                    <p className="text-[#C98A8A] text-sm">Je réponds généralement sous 24h aux messages reçus en semaine.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#DFA49A] mb-1">Proposez-vous des stages ?</h4>
-                    <p className="text-[#C98A8A] text-sm">En tant qu'étudiante, je suis ouverte aux collaborations et échanges d'expérience.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#DFA49A] mb-1">Travaillez-vous sur des projets étudiants ?</h4>
-                    <p className="text-[#C98A8A] text-sm">Oui, je collabore volontiers sur des projets académiques et personnels.</p>
-                  </div>
+            <div>
+              <label htmlFor="sujet" className="block text-sm font-medium text-[#DFA49A] mb-2">
+                Sujet *
+              </label>
+              <input
+                type="text"
+                id="sujet"
+                name="sujet"
+                required
+                value={formData.sujet}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent text-sm"
+                placeholder="Résumé de votre demande"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-[#DFA49A] mb-2">
+                Message *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={6}
+                required
+                maxLength={500}
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-[#5A1F2E] bg-[#2A2224] text-white rounded-lg focus:ring-2 focus:ring-[#B2174A] focus:border-transparent resize-none text-sm"
+                placeholder="Décrivez votre projet ou votre demande en détail..."
+              ></textarea>
+              <div className="text-right text-sm text-[#DFA49A]/70 mt-1">
+                {formData.message.length}/500 caractères
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-[#B2174A] text-white py-3 px-6 rounded-lg hover:bg-[#C8514D] transition-colors font-medium whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+            </button>
+
+            {submitStatus && (
+              <div className={`text-center p-4 rounded-lg ${submitStatus.includes('succès') ? 'bg-[#C8514D]/20 text-[#DFA49A]' : 'bg-red-900/20 text-red-300'}`}>
+                {submitStatus}
+              </div>
+            )}
+          </form>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-white mb-6">Comment puis-je vous aider ?</h2>
+          
+          <div className="space-y-6 mb-12">
+            {services.map((service, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-12 h-12 bg-[#B2174A] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className={`${service.icon} text-white text-xl`}></i>
                 </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                  <p className="text-[#DFA49A]">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#2A2224] p-6 rounded-xl border border-[#5A1F2E]">
+            <h3 className="text-xl font-bold text-white mb-4">Questions fréquentes</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-[#DFA49A] mb-1">Quel est votre délai de réponse ?</h4>
+                <p className="text-[#C98A8A] text-sm">Je réponds généralement sous 24h aux messages reçus en semaine.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#DFA49A] mb-1">Proposez-vous des stages ?</h4>
+                <p className="text-[#C98A8A] text-sm">En tant qu'étudiante, je suis ouverte aux collaborations et échanges d'expérience.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#DFA49A] mb-1">Travaillez-vous sur des projets étudiants ?</h4>
+                <p className="text-[#C98A8A] text-sm">Oui, je collabore volontiers sur des projets académiques et personnels.</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+*/ }
 
 
       {/* Footer */}

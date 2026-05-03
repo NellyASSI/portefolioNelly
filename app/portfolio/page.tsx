@@ -1,6 +1,12 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+export const metadata = {
+  title: "Nelly Portfolio",
+  icons: {
+    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
+  },
+};
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('tous');

@@ -1,5 +1,11 @@
 'use client';
 import Link from 'next/link';
+export const metadata = {
+  title: "Nelly Portfolio",
+  icons: {
+    icon: "/images/image.png", // Le chemin vers ton image dans le dossier public
+  },
+};
 
 export default function AboutPage() {
   const skills = [
@@ -121,7 +127,7 @@ export default function AboutPage() {
                   <p className="text-sm text-[#DFA49A]/80">Ans d'études</p>
                 </div>
                 <div className="bg-[#5A1F2E]/60 rounded-lg p-4 text-center hover:bg-[#5A1F2E] transition-colors duration-300 border border-[#B2174A]/30 hover:border-[#B2174A] transition-all duration-300">
-                  <div className="text-3xl font-bold text-[#DFA49A] mb-1">5+</div>
+                  <div className="text-3xl font-bold text-[#DFA49A] mb-1">10+</div>
                   <p className="text-sm text-[#DFA49A]/80">Compétences</p>
                 </div>
               </div>
